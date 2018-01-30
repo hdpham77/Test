@@ -1,0 +1,53 @@
+﻿<Window x:Class="CERS.Windows.DocumentClone.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="CERS Document Clone Tool" Height="350" Width="525">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<GroupBox Grid.Row="0" Header="Criteria">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">FacilitySubmittalID:</Label>
+				<TextBox Grid.Row="0" Grid.Column="1" Margin="2" Name="tbFacilitySubmittalID">20426</TextBox>
+				<Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" >Source Storage Path:</Label>
+				<TextBox Grid.Row="1" Grid.Column="1" Margin="2" Name="tbSourceStoragePath">\\UPWEB1\F$\Production</TextBox>
+				<Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" >Target Storage Path:</Label>
+				<TextBox Grid.Row="2" Grid.Column="1" Margin="2" Name="tbTargetStoragePath">C:\CERS2Documents</TextBox>
+			</Grid>
+		</GroupBox>
+		<GroupBox Grid.Row="1" Header="Status">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">Status:</Label>
+				<TextBlock Grid.Column="1" Name="tbStatus" Background="AliceBlue" TextWrapping="WrapWithOverflow"></TextBlock>
+			</Grid>
+		</GroupBox>
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="Auto" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="1" Name="btnMove" Margin="2" Click="btnMove_Click">Move</Button>
+			<Button Grid.Column="2" Name="btnClose" Margin="2" Click="btnClose_Click">Close</Button>
+		</Grid>
+	</Grid>
+</Window>

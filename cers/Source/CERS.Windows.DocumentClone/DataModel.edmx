@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CERSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="CERSModelStoreContainer">
+          <EntitySet Name="Document" EntityType="CERSModel.Store.Document" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FacilitySubmittal" EntityType="CERSModel.Store.FacilitySubmittal" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FacilitySubmittalElement" EntityType="CERSModel.Store.FacilitySubmittalElement" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FacilitySubmittalElementDocument" EntityType="CERSModel.Store.FacilitySubmittalElementDocument" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FacilitySubmittalElementResource" EntityType="CERSModel.Store.FacilitySubmittalElementResource" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="FacilitySubmittalElementResourceDocument" EntityType="CERSModel.Store.FacilitySubmittalElementResourceDocument" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="vFacilitySubmittalElementDocumentManifest" EntityType="CERSModel.Store.vFacilitySubmittalElementDocumentManifest" store:Type="Views" store:Schema="dbo" store:Name="vFacilitySubmittalElementDocumentManifest" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+      [vFacilitySubmittalElementDocumentManifest].[CERSID] AS [CERSID], 
+      [vFacilitySubmittalElementDocumentManifest].[FacilityName] AS [FacilityName], 
+      [vFacilitySubmittalElementDocumentManifest].[OrganizationID] AS [OrganizationID], 
+      [vFacilitySubmittalElementDocumentManifest].[FSEID] AS [FSEID], 
+      [vFacilitySubmittalElementDocumentManifest].[FacilitySubmittalID] AS [FacilitySubmittalID], 
+      [vFacilitySubmittalElementDocumentManifest].[SubmittalElementID] AS [SubmittalElementID], 
+      [vFacilitySubmittalElementDocumentManifest].[SubmittalElementName] AS [SubmittalElementName], 
+      [vFacilitySubmittalElementDocumentManifest].[StatusID] AS [StatusID], 
+      [vFacilitySubmittalElementDocumentManifest].[StatusName] AS [StatusName], 
+      [vFacilitySubmittalElementDocumentManifest].[FSERID] AS [FSERID], 
+      [vFacilitySubmittalElementDocumentManifest].[FSERDID] AS [FSERDID], 
+      [vFacilitySubmittalElementDocumentManifest].[FileName] AS [FileName], 
+      [vFacilitySubmittalElementDocumentManifest].[Description] AS [Description], 
+      [vFacilitySubmittalElementDocumentManifest].[DocumentDate] AS [DocumentDate], 
+      [vFacilitySubmittalElementDocumentManifest].[FormatID] AS [FormatID], 
+      [vFacilitySubmittalElementDocumentManifest].[Name] AS [Name], 
+      [vFacilitySubmittalElementDocumentManifest].[TypeID] AS [TypeID], 
+      [vFacilitySubmittalElementDocumentManifest].[DocumentTypeName] AS [DocumentTypeName], 
+      [vFacilitySubmittalElementDocumentManifest].[DocumentID] AS [DocumentID], 
+      [vFacilitySubmittalElementDocumentManifest].[StorageProviderID] AS [StorageProviderID], 
+      [vFacilitySubmittalElementDocumentManifest].[SizeInKB] AS [SizeInKB], 
+      [vFacilitySubmittalElementDocumentManifest].[Location] AS [Location]
+      FROM [dbo].[vFacilitySubmittalElementDocumentManifest] AS [vFacilitySubmittalElementDocumentManifest]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_FacilitySubmittalElement_FacilitySubmittal" Association="CERSModel.Store.FK_FacilitySubmittalElement_FacilitySubmittal">
+            <End Role="FacilitySubmittal" EntitySet="FacilitySubmittal" />
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElement_FacilitySubmittalElement" Association="CERSModel.Store.FK_FacilitySubmittalElement_FacilitySubmittalElement">
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElement" />
+            <End Role="FacilitySubmittalElement1" EntitySet="FacilitySubmittalElement" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementDocument_Document" Association="CERSModel.Store.FK_FacilitySubmittalElementDocument_Document">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="FacilitySubmittalElementDocument" EntitySet="FacilitySubmittalElementDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument" Association="CERSModel.Store.FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument">
+            <End Role="FacilitySubmittalElementResourceDocument" EntitySet="FacilitySubmittalElementResourceDocument" />
+            <End Role="FacilitySubmittalElementDocument" EntitySet="FacilitySubmittalElementDocument" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElement" Association="CERSModel.Store.FK_FacilitySubmittalElementResource_FacilitySubmittalElement">
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElement" />
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResource" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent" Association="CERSModel.Store.FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent">
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResource" />
+            <End Role="FacilitySubmittalElementResource1" EntitySet="FacilitySubmittalElementResource" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource" Association="CERSModel.Store.FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource">
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResource" />
+            <End Role="FacilitySubmittalElementResourceDocument" EntitySet="FacilitySubmittalElementResourceDocument" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Location" Type="varchar" MaxLength="255" />
+          <Property Name="StorageProviderID" Type="int" />
+          <Property Name="SizeInKB" Type="decimal" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SubmittalDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+          <Property Name="FacilityRegulatorKey" Type="varchar" MaxLength="36" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElement">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CERSID" Type="int" Nullable="false" />
+          <Property Name="SubmittalElementID" Type="int" Nullable="false" />
+          <Property Name="FacilitySubmittalID" Type="int" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="TemplateID" Type="int" Nullable="false" />
+          <Property Name="OwningRegulatorID" Type="int" Nullable="false" />
+          <Property Name="OwningOrganizationID" Type="int" Nullable="false" />
+          <Property Name="LastSubmittalDeltaID" Type="int" />
+          <Property Name="Key" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SubmittedDateTime" Type="datetime" />
+          <Property Name="LastDueDateOnSubmittalDate" Type="datetime" />
+          <Property Name="SubmittedByFirstName" Type="varchar" MaxLength="80" />
+          <Property Name="SubmittedByLastName" Type="varchar" MaxLength="80" />
+          <Property Name="SubmittedByEmail" Type="varchar" MaxLength="254" />
+          <Property Name="SubmittedByID" Type="int" />
+          <Property Name="SubmittedByComments" Type="varchar(max)" />
+          <Property Name="SubmittalActionDateTime" Type="datetime" />
+          <Property Name="SubmittalActionAgentName" Type="varchar" MaxLength="80" />
+          <Property Name="SubmittalActionAgentEmail" Type="varchar" MaxLength="254" />
+          <Property Name="SubmittalActionAgentID" Type="int" />
+          <Property Name="SubmittalActionRegulatorID" Type="int" />
+          <Property Name="SubmittalActionComments" Type="varchar(max)" />
+          <Property Name="EDTClientKey" Type="uniqueidentifier" />
+          <Property Name="CERS1FacilityDataID" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+          <Property Name="ReplacedBySeeded" Type="bit" Nullable="false" />
+          <Property Name="SeedingBatchID" Type="int" />
+          <Property Name="AttachmentsTotalSizeKB" Type="bigint" />
+          <Property Name="FSEIDReplacedDuringSeeding" Type="int" />
+          <Property Name="IsHidden" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FacilitySubmittalElementResourceDocumentID" Type="int" Nullable="false" />
+          <Property Name="Key" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DocumentID" Type="int" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="FormatID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="FileSize" Type="int" Nullable="false" />
+          <Property Name="DocumentDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="EDTClientKey" Type="varchar" MaxLength="36" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FacilitySubmittalElementID" Type="int" Nullable="false" />
+          <Property Name="TemplateResourceID" Type="int" Nullable="false" />
+          <Property Name="ParentResourceID" Type="int" />
+          <Property Name="ResourceTypeID" Type="int" Nullable="false" />
+          <Property Name="LastSubmittalDeltaID" Type="int" />
+          <Property Name="Order" Type="int" Nullable="false" />
+          <Property Name="IsStarted" Type="bit" Nullable="false" />
+          <Property Name="IsDocument" Type="bit" Nullable="false" />
+          <Property Name="IsRequired" Type="bit" Nullable="false" />
+          <Property Name="DocumentSourceID" Type="int" />
+          <Property Name="MinRequiredFieldsSubmitted" Type="bit" Nullable="false" />
+          <Property Name="RequiredGuidanceMessageCount" Type="int" Nullable="false" />
+          <Property Name="WarningGuidanceMessageCount" Type="int" Nullable="false" />
+          <Property Name="AdvisoryGuidanceMessageCount" Type="int" Nullable="false" />
+          <Property Name="ResourceEntityCount" Type="int" />
+          <Property Name="DisplayName" Type="varchar" MaxLength="255" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementResourceDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FacilitySubmittalElementResourceID" Type="int" Nullable="false" />
+          <Property Name="SourceID" Type="int" Nullable="false" />
+          <Property Name="LinkUrl" Type="varchar" MaxLength="500" />
+          <Property Name="DateProvidedToRegulator" Type="datetime" />
+          <Property Name="StoredAtFacilityCERSID" Type="int" />
+          <Property Name="ProvidedInSubmittalElementID" Type="int" />
+          <Property Name="Comments" Type="varchar" MaxLength="500" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="CreatedByID" Type="int" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedByID" Type="int" Nullable="false" />
+          <Property Name="Voided" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CERS.dbo.vFacilitySubmittalElementDocumentManifest' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="vFacilitySubmittalElementDocumentManifest">
+          <Key>
+            <PropertyRef Name="CERSID" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="FSEID" />
+            <PropertyRef Name="SubmittalElementID" />
+            <PropertyRef Name="SubmittalElementName" />
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="StatusName" />
+            <PropertyRef Name="FSERID" />
+            <PropertyRef Name="FSERDID" />
+            <PropertyRef Name="FileName" />
+            <PropertyRef Name="DocumentDate" />
+            <PropertyRef Name="FormatID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="DocumentTypeName" />
+          </Key>
+          <Property Name="CERSID" Type="int" Nullable="false" />
+          <Property Name="FacilityName" Type="varchar" MaxLength="90" />
+          <Property Name="OrganizationID" Type="int" Nullable="false" />
+          <Property Name="FSEID" Type="int" Nullable="false" />
+          <Property Name="FacilitySubmittalID" Type="int" />
+          <Property Name="SubmittalElementID" Type="int" Nullable="false" />
+          <Property Name="SubmittalElementName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="StatusName" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="FSERID" Type="int" Nullable="false" />
+          <Property Name="FSERDID" Type="int" Nullable="false" />
+          <Property Name="FileName" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="DocumentDate" Type="datetime" Nullable="false" />
+          <Property Name="FormatID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="DocumentTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DocumentID" Type="int" />
+          <Property Name="StorageProviderID" Type="int" />
+          <Property Name="SizeInKB" Type="decimal" />
+          <Property Name="Location" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_FacilitySubmittalElement_FacilitySubmittal">
+          <End Role="FacilitySubmittal" Type="CERSModel.Store.FacilitySubmittal" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElement" Type="CERSModel.Store.FacilitySubmittalElement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittal">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElement">
+              <PropertyRef Name="FacilitySubmittalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElement_FacilitySubmittalElement">
+          <End Role="FacilitySubmittalElement" Type="CERSModel.Store.FacilitySubmittalElement" Multiplicity="1" />
+          <End Role="FacilitySubmittalElement1" Type="CERSModel.Store.FacilitySubmittalElement" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElement1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementDocument_Document">
+          <End Role="Document" Type="CERSModel.Store.Document" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElementDocument" Type="CERSModel.Store.FacilitySubmittalElementDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementDocument">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument">
+          <End Role="FacilitySubmittalElementResourceDocument" Type="CERSModel.Store.FacilitySubmittalElementResourceDocument" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementDocument" Type="CERSModel.Store.FacilitySubmittalElementDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResourceDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementDocument">
+              <PropertyRef Name="FacilitySubmittalElementResourceDocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElement">
+          <End Role="FacilitySubmittalElement" Type="CERSModel.Store.FacilitySubmittalElement" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.Store.FacilitySubmittalElementResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="FacilitySubmittalElementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent">
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.Store.FacilitySubmittalElementResource" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElementResource1" Type="CERSModel.Store.FacilitySubmittalElementResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResource1">
+              <PropertyRef Name="ParentResourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource">
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.Store.FacilitySubmittalElementResource" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementResourceDocument" Type="CERSModel.Store.FacilitySubmittalElementResourceDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResourceDocument">
+              <PropertyRef Name="FacilitySubmittalElementResourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CERSModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="CERSEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Documents" EntityType="CERSModel.Document" />
+          <EntitySet Name="FacilitySubmittals" EntityType="CERSModel.FacilitySubmittal" />
+          <EntitySet Name="FacilitySubmittalElements" EntityType="CERSModel.FacilitySubmittalElement" />
+          <EntitySet Name="FacilitySubmittalElementDocuments" EntityType="CERSModel.FacilitySubmittalElementDocument" />
+          <EntitySet Name="FacilitySubmittalElementResources" EntityType="CERSModel.FacilitySubmittalElementResource" />
+          <EntitySet Name="FacilitySubmittalElementResourceDocuments" EntityType="CERSModel.FacilitySubmittalElementResourceDocument" />
+          <AssociationSet Name="FK_FacilitySubmittalElementDocument_Document" Association="CERSModel.FK_FacilitySubmittalElementDocument_Document">
+            <End Role="Document" EntitySet="Documents" />
+            <End Role="FacilitySubmittalElementDocument" EntitySet="FacilitySubmittalElementDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElement_FacilitySubmittal" Association="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittal">
+            <End Role="FacilitySubmittal" EntitySet="FacilitySubmittals" />
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElement_FacilitySubmittalElement" Association="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittalElement">
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElements" />
+            <End Role="FacilitySubmittalElement1" EntitySet="FacilitySubmittalElements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElement" Association="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElement">
+            <End Role="FacilitySubmittalElement" EntitySet="FacilitySubmittalElements" />
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument" Association="CERSModel.FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument">
+            <End Role="FacilitySubmittalElementResourceDocument" EntitySet="FacilitySubmittalElementResourceDocuments" />
+            <End Role="FacilitySubmittalElementDocument" EntitySet="FacilitySubmittalElementDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent" Association="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent">
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResources" />
+            <End Role="FacilitySubmittalElementResource1" EntitySet="FacilitySubmittalElementResources" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource" Association="CERSModel.FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource">
+            <End Role="FacilitySubmittalElementResource" EntitySet="FacilitySubmittalElementResources" />
+            <End Role="FacilitySubmittalElementResourceDocument" EntitySet="FacilitySubmittalElementResourceDocuments" />
+          </AssociationSet>
+          <EntitySet Name="vFacilitySubmittalElementDocumentManifests" EntityType="CERSModel.vFacilitySubmittalElementDocumentManifest" />
+        </EntityContainer>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Location" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="StorageProviderID" Type="Int32" />
+          <Property Name="SizeInKB" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="FacilitySubmittalElementDocuments" Relationship="CERSModel.FK_FacilitySubmittalElementDocument_Document" FromRole="Document" ToRole="FacilitySubmittalElementDocument" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="SubmittalDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <Property Name="FacilityRegulatorKey" Type="String" MaxLength="36" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="FacilitySubmittalElements" Relationship="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittal" FromRole="FacilitySubmittal" ToRole="FacilitySubmittalElement" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElement">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CERSID" Type="Int32" Nullable="false" />
+          <Property Name="SubmittalElementID" Type="Int32" Nullable="false" />
+          <Property Name="FacilitySubmittalID" Type="Int32" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="TemplateID" Type="Int32" Nullable="false" />
+          <Property Name="OwningRegulatorID" Type="Int32" Nullable="false" />
+          <Property Name="OwningOrganizationID" Type="Int32" Nullable="false" />
+          <Property Name="LastSubmittalDeltaID" Type="Int32" />
+          <Property Name="Key" Type="Guid" Nullable="false" />
+          <Property Name="SubmittedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="LastDueDateOnSubmittalDate" Type="DateTime" Precision="3" />
+          <Property Name="SubmittedByFirstName" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittedByLastName" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittedByEmail" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittedByID" Type="Int32" />
+          <Property Name="SubmittedByComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittalActionDateTime" Type="DateTime" Precision="3" />
+          <Property Name="SubmittalActionAgentName" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittalActionAgentEmail" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="SubmittalActionAgentID" Type="Int32" />
+          <Property Name="SubmittalActionRegulatorID" Type="Int32" />
+          <Property Name="SubmittalActionComments" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="EDTClientKey" Type="Guid" />
+          <Property Name="CERS1FacilityDataID" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <Property Name="ReplacedBySeeded" Type="Boolean" Nullable="false" />
+          <Property Name="SeedingBatchID" Type="Int32" />
+          <Property Name="AttachmentsTotalSizeKB" Type="Int64" />
+          <Property Name="FSEIDReplacedDuringSeeding" Type="Int32" />
+          <Property Name="IsHidden" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="FacilitySubmittal" Relationship="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittal" FromRole="FacilitySubmittalElement" ToRole="FacilitySubmittal" />
+          <NavigationProperty Name="FacilitySubmittalElement1" Relationship="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittalElement" FromRole="FacilitySubmittalElement" ToRole="FacilitySubmittalElement1" />
+          <NavigationProperty Name="ReplacedDuringSeeding" Relationship="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittalElement" FromRole="FacilitySubmittalElement1" ToRole="FacilitySubmittalElement" />
+          <NavigationProperty Name="Resources" Relationship="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElement" FromRole="FacilitySubmittalElement" ToRole="FacilitySubmittalElementResource" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FacilitySubmittalElementResourceDocumentID" Type="Int32" Nullable="false" />
+          <Property Name="Key" Type="Guid" Nullable="false" />
+          <Property Name="DocumentID" Type="Int32" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="FormatID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="FileSize" Type="Int32" Nullable="false" />
+          <Property Name="DocumentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="EDTClientKey" Type="String" MaxLength="36" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="CERSModel.FK_FacilitySubmittalElementDocument_Document" FromRole="FacilitySubmittalElementDocument" ToRole="Document" />
+          <NavigationProperty Name="ResourceDocument" Relationship="CERSModel.FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument" FromRole="FacilitySubmittalElementDocument" ToRole="FacilitySubmittalElementResourceDocument" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementResource">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FacilitySubmittalElementID" Type="Int32" Nullable="false" />
+          <Property Name="TemplateResourceID" Type="Int32" Nullable="false" />
+          <Property Name="ParentResourceID" Type="Int32" />
+          <Property Name="ResourceTypeID" Type="Int32" Nullable="false" />
+          <Property Name="LastSubmittalDeltaID" Type="Int32" />
+          <Property Name="Order" Type="Int32" Nullable="false" />
+          <Property Name="IsStarted" Type="Boolean" Nullable="false" />
+          <Property Name="IsDocument" Type="Boolean" Nullable="false" />
+          <Property Name="IsRequired" Type="Boolean" Nullable="false" />
+          <Property Name="DocumentSourceID" Type="Int32" />
+          <Property Name="MinRequiredFieldsSubmitted" Type="Boolean" Nullable="false" />
+          <Property Name="RequiredGuidanceMessageCount" Type="Int32" Nullable="false" />
+          <Property Name="WarningGuidanceMessageCount" Type="Int32" Nullable="false" />
+          <Property Name="AdvisoryGuidanceMessageCount" Type="Int32" Nullable="false" />
+          <Property Name="ResourceEntityCount" Type="Int32" />
+          <Property Name="DisplayName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="FacilitySubmittalElement" Relationship="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElement" FromRole="FacilitySubmittalElementResource" ToRole="FacilitySubmittalElement" />
+          <NavigationProperty Name="Children" Relationship="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent" FromRole="FacilitySubmittalElementResource" ToRole="FacilitySubmittalElementResource1" />
+          <NavigationProperty Name="Parent" Relationship="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent" FromRole="FacilitySubmittalElementResource1" ToRole="FacilitySubmittalElementResource" />
+          <NavigationProperty Name="Documents" Relationship="CERSModel.FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource" FromRole="FacilitySubmittalElementResource" ToRole="FacilitySubmittalElementResourceDocument" />
+        </EntityType>
+        <EntityType Name="FacilitySubmittalElementResourceDocument">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FacilitySubmittalElementResourceID" Type="Int32" Nullable="false" />
+          <Property Name="SourceID" Type="Int32" Nullable="false" />
+          <Property Name="LinkUrl" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="DateProvidedToRegulator" Type="DateTime" Precision="3" />
+          <Property Name="StoredAtFacilityCERSID" Type="Int32" />
+          <Property Name="ProvidedInSubmittalElementID" Type="Int32" />
+          <Property Name="Comments" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedByID" Type="Int32" Nullable="false" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedByID" Type="Int32" Nullable="false" />
+          <Property Name="Voided" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="FacilitySubmittalElementDocuments" Relationship="CERSModel.FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument" FromRole="FacilitySubmittalElementResourceDocument" ToRole="FacilitySubmittalElementDocument" />
+          <NavigationProperty Name="Resource" Relationship="CERSModel.FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource" FromRole="FacilitySubmittalElementResourceDocument" ToRole="FacilitySubmittalElementResource" />
+        </EntityType>
+        <Association Name="FK_FacilitySubmittalElementDocument_Document">
+          <End Role="Document" Type="CERSModel.Document" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElementDocument" Type="CERSModel.FacilitySubmittalElementDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementDocument">
+              <PropertyRef Name="DocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElement_FacilitySubmittal">
+          <End Role="FacilitySubmittal" Type="CERSModel.FacilitySubmittal" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElement" Type="CERSModel.FacilitySubmittalElement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittal">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElement">
+              <PropertyRef Name="FacilitySubmittalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElement_FacilitySubmittalElement">
+          <End Role="FacilitySubmittalElement" Type="CERSModel.FacilitySubmittalElement" Multiplicity="1" />
+          <End Role="FacilitySubmittalElement1" Type="CERSModel.FacilitySubmittalElement" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElement1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElement">
+          <End Role="FacilitySubmittalElement" Type="CERSModel.FacilitySubmittalElement" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.FacilitySubmittalElementResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElement">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="FacilitySubmittalElementID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument">
+          <End Role="FacilitySubmittalElementResourceDocument" Type="CERSModel.FacilitySubmittalElementResourceDocument" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementDocument" Type="CERSModel.FacilitySubmittalElementDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResourceDocument">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementDocument">
+              <PropertyRef Name="FacilitySubmittalElementResourceDocumentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent">
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.FacilitySubmittalElementResource" Multiplicity="0..1" />
+          <End Role="FacilitySubmittalElementResource1" Type="CERSModel.FacilitySubmittalElementResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResource1">
+              <PropertyRef Name="ParentResourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource">
+          <End Role="FacilitySubmittalElementResource" Type="CERSModel.FacilitySubmittalElementResource" Multiplicity="1" />
+          <End Role="FacilitySubmittalElementResourceDocument" Type="CERSModel.FacilitySubmittalElementResourceDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FacilitySubmittalElementResource">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FacilitySubmittalElementResourceDocument">
+              <PropertyRef Name="FacilitySubmittalElementResourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="vFacilitySubmittalElementDocumentManifest">
+          <Key>
+            <PropertyRef Name="CERSID" />
+            <PropertyRef Name="OrganizationID" />
+            <PropertyRef Name="FSEID" />
+            <PropertyRef Name="SubmittalElementID" />
+            <PropertyRef Name="SubmittalElementName" />
+            <PropertyRef Name="StatusID" />
+            <PropertyRef Name="StatusName" />
+            <PropertyRef Name="FSERID" />
+            <PropertyRef Name="FSERDID" />
+            <PropertyRef Name="FileName" />
+            <PropertyRef Name="DocumentDate" />
+            <PropertyRef Name="FormatID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="TypeID" />
+            <PropertyRef Name="DocumentTypeName" />
+          </Key>
+          <Property Type="Int32" Name="CERSID" Nullable="false" />
+          <Property Type="String" Name="FacilityName" MaxLength="90" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="OrganizationID" Nullable="false" />
+          <Property Type="Int32" Name="FSEID" Nullable="false" />
+          <Property Type="Int32" Name="FacilitySubmittalID" />
+          <Property Type="Int32" Name="SubmittalElementID" Nullable="false" />
+          <Property Type="String" Name="SubmittalElementName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="StatusID" Nullable="false" />
+          <Property Type="String" Name="StatusName" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="FSERID" Nullable="false" />
+          <Property Type="Int32" Name="FSERDID" Nullable="false" />
+          <Property Type="String" Name="FileName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DocumentDate" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="FormatID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TypeID" Nullable="false" />
+          <Property Type="String" Name="DocumentTypeName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="DocumentID" />
+          <Property Type="Int32" Name="StorageProviderID" />
+          <Property Type="Decimal" Name="SizeInKB" Precision="18" Scale="0" />
+          <Property Type="String" Name="Location" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CERSModelStoreContainer" CdmEntityContainer="CERSEntities">
+          <EntitySetMapping Name="Documents">
+            <EntityTypeMapping TypeName="CERSModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="StorageProviderID" ColumnName="StorageProviderID" />
+                <ScalarProperty Name="SizeInKB" ColumnName="SizeInKB" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilitySubmittals">
+            <EntityTypeMapping TypeName="CERSModel.FacilitySubmittal">
+              <MappingFragment StoreEntitySet="FacilitySubmittal">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SubmittalDate" ColumnName="SubmittalDate" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+                <ScalarProperty Name="FacilityRegulatorKey" ColumnName="FacilityRegulatorKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilitySubmittalElements">
+            <EntityTypeMapping TypeName="CERSModel.FacilitySubmittalElement">
+              <MappingFragment StoreEntitySet="FacilitySubmittalElement">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CERSID" ColumnName="CERSID" />
+                <ScalarProperty Name="SubmittalElementID" ColumnName="SubmittalElementID" />
+                <ScalarProperty Name="FacilitySubmittalID" ColumnName="FacilitySubmittalID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="OwningRegulatorID" ColumnName="OwningRegulatorID" />
+                <ScalarProperty Name="OwningOrganizationID" ColumnName="OwningOrganizationID" />
+                <ScalarProperty Name="LastSubmittalDeltaID" ColumnName="LastSubmittalDeltaID" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="SubmittedDateTime" ColumnName="SubmittedDateTime" />
+                <ScalarProperty Name="LastDueDateOnSubmittalDate" ColumnName="LastDueDateOnSubmittalDate" />
+                <ScalarProperty Name="SubmittedByFirstName" ColumnName="SubmittedByFirstName" />
+                <ScalarProperty Name="SubmittedByLastName" ColumnName="SubmittedByLastName" />
+                <ScalarProperty Name="SubmittedByEmail" ColumnName="SubmittedByEmail" />
+                <ScalarProperty Name="SubmittedByID" ColumnName="SubmittedByID" />
+                <ScalarProperty Name="SubmittedByComments" ColumnName="SubmittedByComments" />
+                <ScalarProperty Name="SubmittalActionDateTime" ColumnName="SubmittalActionDateTime" />
+                <ScalarProperty Name="SubmittalActionAgentName" ColumnName="SubmittalActionAgentName" />
+                <ScalarProperty Name="SubmittalActionAgentEmail" ColumnName="SubmittalActionAgentEmail" />
+                <ScalarProperty Name="SubmittalActionAgentID" ColumnName="SubmittalActionAgentID" />
+                <ScalarProperty Name="SubmittalActionRegulatorID" ColumnName="SubmittalActionRegulatorID" />
+                <ScalarProperty Name="SubmittalActionComments" ColumnName="SubmittalActionComments" />
+                <ScalarProperty Name="EDTClientKey" ColumnName="EDTClientKey" />
+                <ScalarProperty Name="CERS1FacilityDataID" ColumnName="CERS1FacilityDataID" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+                <ScalarProperty Name="ReplacedBySeeded" ColumnName="ReplacedBySeeded" />
+                <ScalarProperty Name="SeedingBatchID" ColumnName="SeedingBatchID" />
+                <ScalarProperty Name="AttachmentsTotalSizeKB" ColumnName="AttachmentsTotalSizeKB" />
+                <ScalarProperty Name="FSEIDReplacedDuringSeeding" ColumnName="FSEIDReplacedDuringSeeding" />
+                <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilitySubmittalElementDocuments">
+            <EntityTypeMapping TypeName="CERSModel.FacilitySubmittalElementDocument">
+              <MappingFragment StoreEntitySet="FacilitySubmittalElementDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FacilitySubmittalElementResourceDocumentID" ColumnName="FacilitySubmittalElementResourceDocumentID" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EDTClientKey" ColumnName="EDTClientKey" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilitySubmittalElementResources">
+            <EntityTypeMapping TypeName="CERSModel.FacilitySubmittalElementResource">
+              <MappingFragment StoreEntitySet="FacilitySubmittalElementResource">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FacilitySubmittalElementID" ColumnName="FacilitySubmittalElementID" />
+                <ScalarProperty Name="TemplateResourceID" ColumnName="TemplateResourceID" />
+                <ScalarProperty Name="ParentResourceID" ColumnName="ParentResourceID" />
+                <ScalarProperty Name="ResourceTypeID" ColumnName="ResourceTypeID" />
+                <ScalarProperty Name="LastSubmittalDeltaID" ColumnName="LastSubmittalDeltaID" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="IsStarted" ColumnName="IsStarted" />
+                <ScalarProperty Name="IsDocument" ColumnName="IsDocument" />
+                <ScalarProperty Name="IsRequired" ColumnName="IsRequired" />
+                <ScalarProperty Name="DocumentSourceID" ColumnName="DocumentSourceID" />
+                <ScalarProperty Name="MinRequiredFieldsSubmitted" ColumnName="MinRequiredFieldsSubmitted" />
+                <ScalarProperty Name="RequiredGuidanceMessageCount" ColumnName="RequiredGuidanceMessageCount" />
+                <ScalarProperty Name="WarningGuidanceMessageCount" ColumnName="WarningGuidanceMessageCount" />
+                <ScalarProperty Name="AdvisoryGuidanceMessageCount" ColumnName="AdvisoryGuidanceMessageCount" />
+                <ScalarProperty Name="ResourceEntityCount" ColumnName="ResourceEntityCount" />
+                <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FacilitySubmittalElementResourceDocuments">
+            <EntityTypeMapping TypeName="CERSModel.FacilitySubmittalElementResourceDocument">
+              <MappingFragment StoreEntitySet="FacilitySubmittalElementResourceDocument">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FacilitySubmittalElementResourceID" ColumnName="FacilitySubmittalElementResourceID" />
+                <ScalarProperty Name="SourceID" ColumnName="SourceID" />
+                <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+                <ScalarProperty Name="DateProvidedToRegulator" ColumnName="DateProvidedToRegulator" />
+                <ScalarProperty Name="StoredAtFacilityCERSID" ColumnName="StoredAtFacilityCERSID" />
+                <ScalarProperty Name="ProvidedInSubmittalElementID" ColumnName="ProvidedInSubmittalElementID" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedByID" ColumnName="CreatedByID" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedByID" ColumnName="UpdatedByID" />
+                <ScalarProperty Name="Voided" ColumnName="Voided" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vFacilitySubmittalElementDocumentManifests">
+            <EntityTypeMapping TypeName="CERSModel.vFacilitySubmittalElementDocumentManifest">
+              <MappingFragment StoreEntitySet="vFacilitySubmittalElementDocumentManifest">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="SizeInKB" ColumnName="SizeInKB" />
+                <ScalarProperty Name="StorageProviderID" ColumnName="StorageProviderID" />
+                <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+                <ScalarProperty Name="DocumentTypeName" ColumnName="DocumentTypeName" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FSERDID" ColumnName="FSERDID" />
+                <ScalarProperty Name="FSERID" ColumnName="FSERID" />
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="SubmittalElementName" ColumnName="SubmittalElementName" />
+                <ScalarProperty Name="SubmittalElementID" ColumnName="SubmittalElementID" />
+                <ScalarProperty Name="FacilitySubmittalID" ColumnName="FacilitySubmittalID" />
+                <ScalarProperty Name="FSEID" ColumnName="FSEID" />
+                <ScalarProperty Name="OrganizationID" ColumnName="OrganizationID" />
+                <ScalarProperty Name="FacilityName" ColumnName="FacilityName" />
+                <ScalarProperty Name="CERSID" ColumnName="CERSID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

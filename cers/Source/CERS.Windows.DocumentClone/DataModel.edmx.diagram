@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab96b8ad1d6e46078615d16273b003f9" Name="Diagram1">
+        <EntityTypeShape EntityType="CERSModel.Document" Width="2.75" PointX="6.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CERSModel.FacilitySubmittal" Width="2" PointX="0.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CERSModel.FacilitySubmittalElement" Width="1.75" PointX="2.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CERSModel.FacilitySubmittalElementDocument" Width="3" PointX="12.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CERSModel.FacilitySubmittalElementResource" Width="2.875" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CERSModel.FacilitySubmittalElementResourceDocument" Width="3.125" PointX="8.5" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElementDocument_Document" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittal" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElement_FacilitySubmittalElement" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElement" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElementDocument_FacilitySubmittalElementResourceDocument" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElementResource_FacilitySubmittalElementResource_Parent" ManuallyRouted="false" />
+        <AssociationConnector Association="CERSModel.FK_FacilitySubmittalElementResourceDocument_FacilitySubmittalElementResource" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CERSModel.vFacilitySubmittalElementDocumentManifest" Width="3.875" PointX="18" PointY="9" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
