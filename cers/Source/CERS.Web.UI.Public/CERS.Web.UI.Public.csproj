@@ -1,0 +1,2171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC271C77-CB0E-4133-973C-000C429DA301}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CERS.Web.UI.Public</RootNamespace>
+    <AssemblyName>CERS.Web.UI.Public</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Testing|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Training|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Documentation|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataAnnotationsExtensions">
+      <HintPath>..\..\..\SharedBinaries\DataAnnotatinosExtentions\DataAnnotationsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DataAnnotationsExtensions.ClientValidation">
+      <HintPath>..\..\..\SharedBinaries\DataAnnotatinosExtentions\DataAnnotationsExtensions.ClientValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc, Version=2013.1.514.340, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedBinaries\Telerik\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Reporting, Version=8.2.14.1204, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedBinaries\Telerik\Telerik.Reporting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Mvc, Version=2013.2.611.340, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedBinaries\Telerik\Telerik.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvhtmltopdf, Version=9.8.0.0, Culture=neutral, PublicKeyToken=b12703d35a33ff98, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedBinaries\Winnovative Pdf\wnvhtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvpdfmerge, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5b5f377bc08a4d32, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SharedBinaries\Winnovative Pdf\wnvpdfmerge.dll</HintPath>
+    </Reference>
+    <Reference Include="wnvxls">
+      <HintPath>..\..\..\SharedBinaries\Winnovative Excel\wnvxls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AppControllerBase.cs" />
+    <Compile Include="Controllers\DataRegistryController.cs" />
+    <Compile Include="Controllers\DirectoryController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\RegulatorDirectorySearchViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\2013.2.611\Black\editor.png" />
+    <Content Include="Content\2013.2.611\Black\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Black\loading.gif" />
+    <Content Include="Content\2013.2.611\Black\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Black\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Black\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Black\sprite.png" />
+    <Content Include="Content\2013.2.611\Black\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Black\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Black\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Default\editor.png" />
+    <Content Include="Content\2013.2.611\Default\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Default\loading.gif" />
+    <Content Include="Content\2013.2.611\Default\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Default\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Default\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Default\sprite.png" />
+    <Content Include="Content\2013.2.611\Default\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Default\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Default\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Forest\editor.png" />
+    <Content Include="Content\2013.2.611\Forest\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Forest\loading.gif" />
+    <Content Include="Content\2013.2.611\Forest\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Forest\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Forest\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Forest\sprite.png" />
+    <Content Include="Content\2013.2.611\Forest\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Forest\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Forest\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Hay\editor.png" />
+    <Content Include="Content\2013.2.611\Hay\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Hay\loading.gif" />
+    <Content Include="Content\2013.2.611\Hay\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Hay\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Hay\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Hay\sprite.png" />
+    <Content Include="Content\2013.2.611\Hay\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Hay\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Hay\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Metro\editor.png" />
+    <Content Include="Content\2013.2.611\Metro\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Metro\loading.gif" />
+    <Content Include="Content\2013.2.611\Metro\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Metro\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Metro\sprite.png" />
+    <Content Include="Content\2013.2.611\Office2007\editor.png" />
+    <Content Include="Content\2013.2.611\Office2007\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Office2007\loading.gif" />
+    <Content Include="Content\2013.2.611\Office2007\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Office2007\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Office2007\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Office2007\sprite.png" />
+    <Content Include="Content\2013.2.611\Office2007\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Office2007\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Office2007\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\editor.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\loading.gif" />
+    <Content Include="Content\2013.2.611\Office2010Black\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Office2010Black\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Office2010Black\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\sprite.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Office2010Black\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Office2010Blue\editor.png" />
+    <Content Include="Content\2013.2.611\Office2010Blue\gradient.png" />
+    <Content Include="Content\2013.2.611\Office2010Blue\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Office2010Blue\loading.gif" />
+    <Content Include="Content\2013.2.611\Office2010Blue\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Office2010Blue\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Office2010Blue\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Office2010Blue\sprite.png" />
+    <Content Include="Content\2013.2.611\Office2010Silver\editor.png" />
+    <Content Include="Content\2013.2.611\Office2010Silver\gradient.png" />
+    <Content Include="Content\2013.2.611\Office2010Silver\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Office2010Silver\loading.gif" />
+    <Content Include="Content\2013.2.611\Office2010Silver\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Office2010Silver\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Office2010Silver\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Office2010Silver\sprite.png" />
+    <Content Include="Content\2013.2.611\Outlook\editor.png" />
+    <Content Include="Content\2013.2.611\Outlook\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Outlook\loading.gif" />
+    <Content Include="Content\2013.2.611\Outlook\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Outlook\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Outlook\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Outlook\sprite.png" />
+    <Content Include="Content\2013.2.611\Outlook\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Outlook\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Outlook\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Simple\editor.png" />
+    <Content Include="Content\2013.2.611\Simple\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Simple\loading.gif" />
+    <Content Include="Content\2013.2.611\Simple\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Simple\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Simple\sprite.png" />
+    <Content Include="Content\2013.2.611\Simple\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Simple\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Simple\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\editor.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\loading.gif" />
+    <Content Include="Content\2013.2.611\Sitefinity\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Sitefinity\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Sitefinity\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\sprite.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Sitefinity\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Sunset\editor.png" />
+    <Content Include="Content\2013.2.611\Sunset\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Sunset\loading.gif" />
+    <Content Include="Content\2013.2.611\Sunset\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Sunset\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Sunset\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Sunset\sprite.png" />
+    <Content Include="Content\2013.2.611\Sunset\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Sunset\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Sunset\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\telerik.black.min.css" />
+    <Content Include="Content\2013.2.611\telerik.common.min.css" />
+    <Content Include="Content\2013.2.611\telerik.default.min.css" />
+    <Content Include="Content\2013.2.611\telerik.forest.min.css" />
+    <Content Include="Content\2013.2.611\telerik.hay.min.css" />
+    <Content Include="Content\2013.2.611\telerik.metro.min.css" />
+    <Content Include="Content\2013.2.611\telerik.office2007.min.css" />
+    <Content Include="Content\2013.2.611\telerik.office2010black.min.css" />
+    <Content Include="Content\2013.2.611\telerik.office2010blue.min.css" />
+    <Content Include="Content\2013.2.611\telerik.office2010silver.min.css" />
+    <Content Include="Content\2013.2.611\telerik.outlook.min.css" />
+    <Content Include="Content\2013.2.611\telerik.rtl.min.css" />
+    <Content Include="Content\2013.2.611\telerik.simple.min.css" />
+    <Content Include="Content\2013.2.611\telerik.sitefinity.min.css" />
+    <Content Include="Content\2013.2.611\telerik.sunset.min.css" />
+    <Content Include="Content\2013.2.611\telerik.telerik.min.css" />
+    <Content Include="Content\2013.2.611\telerik.transparent.min.css" />
+    <Content Include="Content\2013.2.611\telerik.vista.min.css" />
+    <Content Include="Content\2013.2.611\telerik.web20.min.css" />
+    <Content Include="Content\2013.2.611\telerik.webblue.min.css" />
+    <Content Include="Content\2013.2.611\telerik.windows7.min.css" />
+    <Content Include="Content\2013.2.611\Telerik\editor.png" />
+    <Content Include="Content\2013.2.611\Telerik\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Telerik\loading.gif" />
+    <Content Include="Content\2013.2.611\Telerik\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Telerik\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Telerik\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Telerik\sprite.png" />
+    <Content Include="Content\2013.2.611\Telerik\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Telerik\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Telerik\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Transparent\active.png" />
+    <Content Include="Content\2013.2.611\Transparent\editor.png" />
+    <Content Include="Content\2013.2.611\Transparent\gradient.png" />
+    <Content Include="Content\2013.2.611\Transparent\group.png" />
+    <Content Include="Content\2013.2.611\Transparent\hover.png" />
+    <Content Include="Content\2013.2.611\Transparent\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Transparent\loading.gif" />
+    <Content Include="Content\2013.2.611\Transparent\selected.png" />
+    <Content Include="Content\2013.2.611\Transparent\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Transparent\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Transparent\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Transparent\sprite.png" />
+    <Content Include="Content\2013.2.611\Transparent\toolbar.png" />
+    <Content Include="Content\2013.2.611\Transparent\widget.png" />
+    <Content Include="Content\2013.2.611\Vista\editor.png" />
+    <Content Include="Content\2013.2.611\Vista\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Vista\loading.gif" />
+    <Content Include="Content\2013.2.611\Vista\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Vista\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Vista\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Vista\sprite.png" />
+    <Content Include="Content\2013.2.611\Web20\editor.png" />
+    <Content Include="Content\2013.2.611\Web20\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Web20\loading.gif" />
+    <Content Include="Content\2013.2.611\Web20\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Web20\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Web20\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Web20\sprite.png" />
+    <Content Include="Content\2013.2.611\Web20\treeview-line.png" />
+    <Content Include="Content\2013.2.611\Web20\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\Web20\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\WebBlue\editor.png" />
+    <Content Include="Content\2013.2.611\WebBlue\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\WebBlue\loading.gif" />
+    <Content Include="Content\2013.2.611\WebBlue\slider-h.gif" />
+    <Content Include="Content\2013.2.611\WebBlue\slider-v.gif" />
+    <Content Include="Content\2013.2.611\WebBlue\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\WebBlue\sprite.png" />
+    <Content Include="Content\2013.2.611\WebBlue\treeview-line.png" />
+    <Content Include="Content\2013.2.611\WebBlue\treeview-nodes-rtl.png" />
+    <Content Include="Content\2013.2.611\WebBlue\treeview-nodes.png" />
+    <Content Include="Content\2013.2.611\Windows7\editor.png" />
+    <Content Include="Content\2013.2.611\Windows7\imagebrowser.png" />
+    <Content Include="Content\2013.2.611\Windows7\loading.gif" />
+    <Content Include="Content\2013.2.611\Windows7\slider-h.gif" />
+    <Content Include="Content\2013.2.611\Windows7\slider-v.gif" />
+    <Content Include="Content\2013.2.611\Windows7\sprite-vertical.png" />
+    <Content Include="Content\2013.2.611\Windows7\sprite.png" />
+    <Content Include="Content\Bliss\bliss-layout.png" />
+    <Content Include="Content\Bliss\CSS\Public.Color.css" />
+    <Content Include="Content\Bliss\CSS\Custom.css" />
+    <Content Include="Content\Bliss\CSS\Global.css" />
+    <Content Include="Content\Bliss\Images\accordion-down-arrow-bg.png" />
+    <Content Include="Content\Bliss\Images\accordion-right-arrow-bg.png" />
+    <Content Include="Content\Bliss\Images\action-up-arrow.png" />
+    <Content Include="Content\Bliss\Images\bg-button-left-colour-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-button-left-grey-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-button-left-red-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-button-right-colour-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-button-right-grey-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-button-right-red-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-left-colour-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-left-grey-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-left-red-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-right-colour-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-right-grey-sprite.png" />
+    <Content Include="Content\Bliss\Images\bg-small-button-right-red-sprite.png" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-content-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-content-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-left-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-left-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-right-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-foot-cap-right-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-footer-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-footer-cap-left-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-footer-cap-right-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-content-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-content-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-left-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-left-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-left-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-right-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-right-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-cap-right-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-content-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-content-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-left-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-left-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-right-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-head-small-cap-right-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\block-icons\64 bit.png" />
+    <Content Include="Content\Bliss\Images\block-icons\address books.png" />
+    <Content Include="Content\Bliss\Images\block-icons\advanced.png" />
+    <Content Include="Content\Bliss\Images\block-icons\applications.png" />
+    <Content Include="Content\Bliss\Images\block-icons\archive.png" />
+    <Content Include="Content\Bliss\Images\block-icons\back_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\burn.png" />
+    <Content Include="Content\Bliss\Images\block-icons\calculator.png" />
+    <Content Include="Content\Bliss\Images\block-icons\cash.png" />
+    <Content Include="Content\Bliss\Images\block-icons\color.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Computer On.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Computer.png" />
+    <Content Include="Content\Bliss\Images\block-icons\copy doc.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Credit card.png" />
+    <Content Include="Content\Bliss\Images\block-icons\delete archive.png" />
+    <Content Include="Content\Bliss\Images\block-icons\delete.gif" />
+    <Content Include="Content\Bliss\Images\block-icons\Desktop 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\down_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\edit.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Ekisho Deep Ocean HD1.png" />
+    <Content Include="Content\Bliss\Images\block-icons\exclamation.png" />
+    <Content Include="Content\Bliss\Images\block-icons\exit.png" />
+    <Content Include="Content\Bliss\Images\block-icons\folder.png" />
+    <Content Include="Content\Bliss\Images\block-icons\folder_smart.png" />
+    <Content Include="Content\Bliss\Images\block-icons\forward all.png" />
+    <Content Include="Content\Bliss\Images\block-icons\forward button white.png" />
+    <Content Include="Content\Bliss\Images\block-icons\forward button.png" />
+    <Content Include="Content\Bliss\Images\block-icons\forward.png" />
+    <Content Include="Content\Bliss\Images\block-icons\forward_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\GeneralPreferences.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Globe.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Graphite Computer On.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Graphite Desktop.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Graphite Globe.png" />
+    <Content Include="Content\Bliss\Images\block-icons\heineken.png" />
+    <Content Include="Content\Bliss\Images\block-icons\help.png" />
+    <Content Include="Content\Bliss\Images\block-icons\iChat.png" />
+    <Content Include="Content\Bliss\Images\block-icons\info.png" />
+    <Content Include="Content\Bliss\Images\block-icons\install.png" />
+    <Content Include="Content\Bliss\Images\block-icons\intel 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\intel.png" />
+    <Content Include="Content\Bliss\Images\block-icons\iPhone.png" />
+    <Content Include="Content\Bliss\Images\block-icons\keyboard.png" />
+    <Content Include="Content\Bliss\Images\block-icons\library bookmarked.png" />
+    <Content Include="Content\Bliss\Images\block-icons\lock.png" />
+    <Content Include="Content\Bliss\Images\block-icons\minus white.png" />
+    <Content Include="Content\Bliss\Images\block-icons\minus.png" />
+    <Content Include="Content\Bliss\Images\block-icons\monitor.png" />
+    <Content Include="Content\Bliss\Images\block-icons\moon 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\moon 3.png" />
+    <Content Include="Content\Bliss\Images\block-icons\movies alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\movies.png" />
+    <Content Include="Content\Bliss\Images\block-icons\music 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\music.png" />
+    <Content Include="Content\Bliss\Images\block-icons\new archive.png" />
+    <Content Include="Content\Bliss\Images\block-icons\new doc.png" />
+    <Content Include="Content\Bliss\Images\block-icons\new mail.png" />
+    <Content Include="Content\Bliss\Images\block-icons\notebook.png" />
+    <Content Include="Content\Bliss\Images\block-icons\open alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\pause.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Picture Cast.png" />
+    <Content Include="Content\Bliss\Images\block-icons\picture.png" />
+    <Content Include="Content\Bliss\Images\block-icons\play.png" />
+    <Content Include="Content\Bliss\Images\block-icons\plus.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Podcast.png" />
+    <Content Include="Content\Bliss\Images\block-icons\public.png" />
+    <Content Include="Content\Bliss\Images\block-icons\record.png" />
+    <Content Include="Content\Bliss\Images\block-icons\refresh.png" />
+    <Content Include="Content\Bliss\Images\block-icons\remove.png" />
+    <Content Include="Content\Bliss\Images\block-icons\rewind button white.png" />
+    <Content Include="Content\Bliss\Images\block-icons\rewind button.png" />
+    <Content Include="Content\Bliss\Images\block-icons\RSS.png" />
+    <Content Include="Content\Bliss\Images\block-icons\RSS_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\search.png" />
+    <Content Include="Content\Bliss\Images\block-icons\send.png" />
+    <Content Include="Content\Bliss\Images\block-icons\server.png" />
+    <Content Include="Content\Bliss\Images\block-icons\smiley sad.png" />
+    <Content Include="Content\Bliss\Images\block-icons\smiley.png" />
+    <Content Include="Content\Bliss\Images\block-icons\splash green.png" />
+    <Content Include="Content\Bliss\Images\block-icons\star.png" />
+    <Content Include="Content\Bliss\Images\block-icons\stop 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\stop.png" />
+    <Content Include="Content\Bliss\Images\block-icons\stop_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\sun 2.png" />
+    <Content Include="Content\Bliss\Images\block-icons\sun.png" />
+    <Content Include="Content\Bliss\Images\block-icons\terminal.png" />
+    <Content Include="Content\Bliss\Images\block-icons\trash full.png" />
+    <Content Include="Content\Bliss\Images\block-icons\trash.png" />
+    <Content Include="Content\Bliss\Images\block-icons\unarchive.png" />
+    <Content Include="Content\Bliss\Images\block-icons\Universal.png" />
+    <Content Include="Content\Bliss\Images\block-icons\unread mail.png" />
+    <Content Include="Content\Bliss\Images\block-icons\up_alt.png" />
+    <Content Include="Content\Bliss\Images\block-icons\user.png" />
+    <Content Include="Content\Bliss\Images\block-icons\users.png" />
+    <Content Include="Content\Bliss\Images\block-icons\window.png" />
+    <Content Include="Content\Bliss\Images\block-icons\zoom in.png" />
+    <Content Include="Content\Bliss\Images\block-icons\zoom out.png" />
+    <Content Include="Content\Bliss\Images\body-bg-development.jpg" />
+    <Content Include="Content\Bliss\Images\body-bg-staging.jpg" />
+    <Content Include="Content\Bliss\Images\body-bg-test.jpg" />
+    <Content Include="Content\Bliss\Images\body-bg-training.jpg" />
+    <Content Include="Content\Bliss\Images\body-bg.jpg" />
+    <Content Include="Content\Bliss\Images\button-colour-bg.png" />
+    <Content Include="Content\Bliss\Images\button-grey-bg.png" />
+    <Content Include="Content\Bliss\Images\calendar-event-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\calendar-event-grey-bg.gif" />
+    <Content Include="Content\Bliss\Images\cell-block-colour-bg.png" />
+    <Content Include="Content\Bliss\Images\cell-block-grey-bg.png" />
+    <Content Include="Content\Bliss\Images\collapse_icon_down.png" />
+    <Content Include="Content\Bliss\Images\collapse_icon_up.png" />
+    <Content Include="Content\Bliss\Images\field-bg.gif" />
+    <Content Include="Content\Bliss\Images\field-red-bg.gif" />
+    <Content Include="Content\Bliss\Images\flash-failure-bg.gif" />
+    <Content Include="Content\Bliss\Images\flash-notice-bg.gif" />
+    <Content Include="Content\Bliss\Images\flash-success-bg.gif" />
+    <Content Include="Content\Bliss\Images\icons\accept.png" />
+    <Content Include="Content\Bliss\Images\icons\add.png" />
+    <Content Include="Content\Bliss\Images\icons\anchor.png" />
+    <Content Include="Content\Bliss\Images\icons\application.png" />
+    <Content Include="Content\Bliss\Images\icons\application_add.png" />
+    <Content Include="Content\Bliss\Images\icons\application_cascade.png" />
+    <Content Include="Content\Bliss\Images\icons\application_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\application_double.png" />
+    <Content Include="Content\Bliss\Images\icons\application_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\application_error.png" />
+    <Content Include="Content\Bliss\Images\icons\application_form.png" />
+    <Content Include="Content\Bliss\Images\icons\application_form_add.png" />
+    <Content Include="Content\Bliss\Images\icons\application_form_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\application_form_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\application_form_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\application_get.png" />
+    <Content Include="Content\Bliss\Images\icons\application_go.png" />
+    <Content Include="Content\Bliss\Images\icons\application_home.png" />
+    <Content Include="Content\Bliss\Images\icons\application_key.png" />
+    <Content Include="Content\Bliss\Images\icons\application_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\application_link.png" />
+    <Content Include="Content\Bliss\Images\icons\application_osx.png" />
+    <Content Include="Content\Bliss\Images\icons\application_osx_terminal.png" />
+    <Content Include="Content\Bliss\Images\icons\application_put.png" />
+    <Content Include="Content\Bliss\Images\icons\application_side_boxes.png" />
+    <Content Include="Content\Bliss\Images\icons\application_side_contract.png" />
+    <Content Include="Content\Bliss\Images\icons\application_side_expand.png" />
+    <Content Include="Content\Bliss\Images\icons\application_side_list.png" />
+    <Content Include="Content\Bliss\Images\icons\application_side_tree.png" />
+    <Content Include="Content\Bliss\Images\icons\application_split.png" />
+    <Content Include="Content\Bliss\Images\icons\application_tile_horizontal.png" />
+    <Content Include="Content\Bliss\Images\icons\application_tile_vertical.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_columns.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_detail.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_gallery.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_icons.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_list.png" />
+    <Content Include="Content\Bliss\Images\icons\application_view_tile.png" />
+    <Content Include="Content\Bliss\Images\icons\application_xp.png" />
+    <Content Include="Content\Bliss\Images\icons\application_xp_terminal.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_branch.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_divide.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_down.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_in.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_inout.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_join.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_left.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_merge.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_out.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_redo.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_refresh.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_refresh_small.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_right.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_rotate_anticlockwise.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_rotate_clockwise.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_switch.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_turn_left.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_turn_right.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_undo.png" />
+    <Content Include="Content\Bliss\Images\icons\arrow_up.png" />
+    <Content Include="Content\Bliss\Images\icons\asterisk_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\asterisk_yellow.png" />
+    <Content Include="Content\Bliss\Images\icons\attach.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_add.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_bronze_1.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_bronze_2.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_bronze_3.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_gold_1.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_gold_2.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_gold_3.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_silver_1.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_silver_2.png" />
+    <Content Include="Content\Bliss\Images\icons\award_star_silver_3.png" />
+    <Content Include="Content\Bliss\Images\icons\basket.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_add.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_error.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_go.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_put.png" />
+    <Content Include="Content\Bliss\Images\icons\basket_remove.png" />
+    <Content Include="Content\Bliss\Images\icons\bell.png" />
+    <Content Include="Content\Bliss\Images\icons\bell_add.png" />
+    <Content Include="Content\Bliss\Images\icons\bell_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\bell_error.png" />
+    <Content Include="Content\Bliss\Images\icons\bell_go.png" />
+    <Content Include="Content\Bliss\Images\icons\bell_link.png" />
+    <Content Include="Content\Bliss\Images\icons\bin.png" />
+    <Content Include="Content\Bliss\Images\icons\bin_closed.png" />
+    <Content Include="Content\Bliss\Images\icons\bin_empty.png" />
+    <Content Include="Content\Bliss\Images\icons\bomb.png" />
+    <Content Include="Content\Bliss\Images\icons\book.png" />
+    <Content Include="Content\Bliss\Images\icons\book_add.png" />
+    <Content Include="Content\Bliss\Images\icons\book_addresses.png" />
+    <Content Include="Content\Bliss\Images\icons\book_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\book_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\book_error.png" />
+    <Content Include="Content\Bliss\Images\icons\book_go.png" />
+    <Content Include="Content\Bliss\Images\icons\book_key.png" />
+    <Content Include="Content\Bliss\Images\icons\book_link.png" />
+    <Content Include="Content\Bliss\Images\icons\book_next.png" />
+    <Content Include="Content\Bliss\Images\icons\book_open.png" />
+    <Content Include="Content\Bliss\Images\icons\book_previous.png" />
+    <Content Include="Content\Bliss\Images\icons\box.png" />
+    <Content Include="Content\Bliss\Images\icons\brick.png" />
+    <Content Include="Content\Bliss\Images\icons\bricks.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_add.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_error.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_go.png" />
+    <Content Include="Content\Bliss\Images\icons\brick_link.png" />
+    <Content Include="Content\Bliss\Images\icons\briefcase.png" />
+    <Content Include="Content\Bliss\Images\icons\bug.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_add.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_error.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_go.png" />
+    <Content Include="Content\Bliss\Images\icons\bug_link.png" />
+    <Content Include="Content\Bliss\Images\icons\building.png" />
+    <Content Include="Content\Bliss\Images\icons\building_add.png" />
+    <Content Include="Content\Bliss\Images\icons\building_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\building_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\building_error.png" />
+    <Content Include="Content\Bliss\Images\icons\building_go.png" />
+    <Content Include="Content\Bliss\Images\icons\building_key.png" />
+    <Content Include="Content\Bliss\Images\icons\building_link.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_add.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_arrow_bottom.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_arrow_down.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_arrow_top.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_arrow_up.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_black.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_disk.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_error.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_feed.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_go.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_green.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_key.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_picture.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_pink.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_purple.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_red.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_star.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_toggle_minus.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_toggle_plus.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_white.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_wrench.png" />
+    <Content Include="Content\Bliss\Images\icons\bullet_yellow.png" />
+    <Content Include="Content\Bliss\Images\icons\cake.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator_add.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator_error.png" />
+    <Content Include="Content\Bliss\Images\icons\calculator_link.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_add.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_link.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_view_day.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_view_month.png" />
+    <Content Include="Content\Bliss\Images\icons\calendar_view_week.png" />
+    <Content Include="Content\Bliss\Images\icons\camera.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_add.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_error.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_go.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_link.png" />
+    <Content Include="Content\Bliss\Images\icons\camera_small.png" />
+    <Content Include="Content\Bliss\Images\icons\cancel.png" />
+    <Content Include="Content\Bliss\Images\icons\car.png" />
+    <Content Include="Content\Bliss\Images\icons\cart.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_add.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_error.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_go.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_put.png" />
+    <Content Include="Content\Bliss\Images\icons\cart_remove.png" />
+    <Content Include="Content\Bliss\Images\icons\car_add.png" />
+    <Content Include="Content\Bliss\Images\icons\car_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\cd.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_add.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_burn.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_eject.png" />
+    <Content Include="Content\Bliss\Images\icons\cd_go.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar_add.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar_error.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_bar_link.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_add.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_error.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_go.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_curve_link.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line_add.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line_error.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_line_link.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_organisation.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_organisation_add.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_organisation_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie_add.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie_error.png" />
+    <Content Include="Content\Bliss\Images\icons\chart_pie_link.png" />
+    <Content Include="Content\Bliss\Images\icons\checkeredflag.png" />
+    <Content Include="Content\Bliss\Images\icons\clock.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_add.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_error.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_go.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_link.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_pause.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_play.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_red.png" />
+    <Content Include="Content\Bliss\Images\icons\clock_stop.png" />
+    <Content Include="Content\Bliss\Images\icons\cog.png" />
+    <Content Include="Content\Bliss\Images\icons\cog_add.png" />
+    <Content Include="Content\Bliss\Images\icons\cog_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\cog_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\cog_error.png" />
+    <Content Include="Content\Bliss\Images\icons\cog_go.png" />
+    <Content Include="Content\Bliss\Images\icons\coins.png" />
+    <Content Include="Content\Bliss\Images\icons\coins_add.png" />
+    <Content Include="Content\Bliss\Images\icons\coins_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\color_swatch.png" />
+    <Content Include="Content\Bliss\Images\icons\color_wheel.png" />
+    <Content Include="Content\Bliss\Images\icons\comment.png" />
+    <Content Include="Content\Bliss\Images\icons\comments.png" />
+    <Content Include="Content\Bliss\Images\icons\comments_add.png" />
+    <Content Include="Content\Bliss\Images\icons\comments_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\comment_add.png" />
+    <Content Include="Content\Bliss\Images\icons\comment_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\comment_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\compress.png" />
+    <Content Include="Content\Bliss\Images\icons\computer.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_add.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_error.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_go.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_key.png" />
+    <Content Include="Content\Bliss\Images\icons\computer_link.png" />
+    <Content Include="Content\Bliss\Images\icons\connect.png" />
+    <Content Include="Content\Bliss\Images\icons\contrast.png" />
+    <Content Include="Content\Bliss\Images\icons\contrast_decrease.png" />
+    <Content Include="Content\Bliss\Images\icons\contrast_high.png" />
+    <Content Include="Content\Bliss\Images\icons\contrast_increase.png" />
+    <Content Include="Content\Bliss\Images\icons\contrast_low.png" />
+    <Content Include="Content\Bliss\Images\icons\controller.png" />
+    <Content Include="Content\Bliss\Images\icons\controller_add.png" />
+    <Content Include="Content\Bliss\Images\icons\controller_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\controller_error.png" />
+    <Content Include="Content\Bliss\Images\icons\control_eject.png" />
+    <Content Include="Content\Bliss\Images\icons\control_eject_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_end.png" />
+    <Content Include="Content\Bliss\Images\icons\control_end_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_equalizer.png" />
+    <Content Include="Content\Bliss\Images\icons\control_equalizer_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_fastforward.png" />
+    <Content Include="Content\Bliss\Images\icons\control_fastforward_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_pause.png" />
+    <Content Include="Content\Bliss\Images\icons\control_pause_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_play.png" />
+    <Content Include="Content\Bliss\Images\icons\control_play_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_repeat.png" />
+    <Content Include="Content\Bliss\Images\icons\control_repeat_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_rewind.png" />
+    <Content Include="Content\Bliss\Images\icons\control_rewind_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_start.png" />
+    <Content Include="Content\Bliss\Images\icons\control_start_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\control_stop.png" />
+    <Content Include="Content\Bliss\Images\icons\control_stop_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\creditcards.png" />
+    <Content Include="Content\Bliss\Images\icons\cross.png" />
+    <Content Include="Content\Bliss\Images\icons\css.png" />
+    <Content Include="Content\Bliss\Images\icons\css_add.png" />
+    <Content Include="Content\Bliss\Images\icons\css_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\css_go.png" />
+    <Content Include="Content\Bliss\Images\icons\css_valid.png" />
+    <Content Include="Content\Bliss\Images\icons\cup.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_add.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_error.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_go.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_key.png" />
+    <Content Include="Content\Bliss\Images\icons\cup_link.png" />
+    <Content Include="Content\Bliss\Images\icons\cursor.png" />
+    <Content Include="Content\Bliss\Images\icons\cut.png" />
+    <Content Include="Content\Bliss\Images\icons\cut_red.png" />
+    <Content Include="Content\Bliss\Images\icons\database.png" />
+    <Content Include="Content\Bliss\Images\icons\database_add.png" />
+    <Content Include="Content\Bliss\Images\icons\database_connect.png" />
+    <Content Include="Content\Bliss\Images\icons\database_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\database_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\database_error.png" />
+    <Content Include="Content\Bliss\Images\icons\database_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\database_go.png" />
+    <Content Include="Content\Bliss\Images\icons\database_key.png" />
+    <Content Include="Content\Bliss\Images\icons\database_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\database_link.png" />
+    <Content Include="Content\Bliss\Images\icons\database_refresh.png" />
+    <Content Include="Content\Bliss\Images\icons\database_save.png" />
+    <Content Include="Content\Bliss\Images\icons\database_table.png" />
+    <Content Include="Content\Bliss\Images\icons\date.png" />
+    <Content Include="Content\Bliss\Images\icons\date_add.png" />
+    <Content Include="Content\Bliss\Images\icons\date_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\date_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\date_error.png" />
+    <Content Include="Content\Bliss\Images\icons\date_go.png" />
+    <Content Include="Content\Bliss\Images\icons\date_link.png" />
+    <Content Include="Content\Bliss\Images\icons\date_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\date_next.png" />
+    <Content Include="Content\Bliss\Images\icons\date_previous.png" />
+    <Content Include="Content\Bliss\Images\icons\delete.png" />
+    <Content Include="Content\Bliss\Images\icons\disconnect.png" />
+    <Content Include="Content\Bliss\Images\icons\disk.png" />
+    <Content Include="Content\Bliss\Images\icons\disk_multiple.png" />
+    <Content Include="Content\Bliss\Images\icons\door.png" />
+    <Content Include="Content\Bliss\Images\icons\door_in.png" />
+    <Content Include="Content\Bliss\Images\icons\door_open.png" />
+    <Content Include="Content\Bliss\Images\icons\door_out.png" />
+    <Content Include="Content\Bliss\Images\icons\drink.png" />
+    <Content Include="Content\Bliss\Images\icons\drink_empty.png" />
+    <Content Include="Content\Bliss\Images\icons\drive.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_add.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_burn.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_cd.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_cd_empty.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_disk.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_error.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_go.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_key.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_link.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_network.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_rename.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_user.png" />
+    <Content Include="Content\Bliss\Images\icons\drive_web.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_add.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_error.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_go.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_key.png" />
+    <Content Include="Content\Bliss\Images\icons\dvd_link.png" />
+    <Content Include="Content\Bliss\Images\icons\email.png" />
+    <Content Include="Content\Bliss\Images\icons\email_add.png" />
+    <Content Include="Content\Bliss\Images\icons\email_attach.png" />
+    <Content Include="Content\Bliss\Images\icons\email_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\email_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\email_error.png" />
+    <Content Include="Content\Bliss\Images\icons\email_go.png" />
+    <Content Include="Content\Bliss\Images\icons\email_link.png" />
+    <Content Include="Content\Bliss\Images\icons\email_open.png" />
+    <Content Include="Content\Bliss\Images\icons\email_open_image.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_evilgrin.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_grin.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_happy.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_smile.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_surprised.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_tongue.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_unhappy.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_waii.png" />
+    <Content Include="Content\Bliss\Images\icons\emoticon_wink.png" />
+    <Content Include="Content\Bliss\Images\icons\error.png" />
+    <Content Include="Content\Bliss\Images\icons\error_add.png" />
+    <Content Include="Content\Bliss\Images\icons\error_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\error_go.png" />
+    <Content Include="Content\Bliss\Images\icons\exclamation.png" />
+    <Content Include="Content\Bliss\Images\icons\eye.png" />
+    <Content Include="Content\Bliss\Images\icons\feed.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_add.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_disk.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_error.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_go.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_key.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_link.png" />
+    <Content Include="Content\Bliss\Images\icons\feed_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\female.png" />
+    <Content Include="Content\Bliss\Images\icons\film.png" />
+    <Content Include="Content\Bliss\Images\icons\film_add.png" />
+    <Content Include="Content\Bliss\Images\icons\film_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\film_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\film_error.png" />
+    <Content Include="Content\Bliss\Images\icons\film_go.png" />
+    <Content Include="Content\Bliss\Images\icons\film_key.png" />
+    <Content Include="Content\Bliss\Images\icons\film_link.png" />
+    <Content Include="Content\Bliss\Images\icons\film_save.png" />
+    <Content Include="Content\Bliss\Images\icons\find.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_green.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_green_inactive.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_pink.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_purple.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_red.png" />
+    <Content Include="Content\Bliss\Images\icons\flag_yellow.png" />
+    <Content Include="Content\Bliss\Images\icons\folder.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_add.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_bell.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_brick.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_bug.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_camera.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_database.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_error.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_explore.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_feed.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_find.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_go.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_go_inactive.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_heart.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_image.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_key.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_lightbulb.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_link.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_page.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_page_white.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_palette.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_picture.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_star.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_table.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_user.png" />
+    <Content Include="Content\Bliss\Images\icons\folder_wrench.png" />
+    <Content Include="Content\Bliss\Images\icons\font.png" />
+    <Content Include="Content\Bliss\Images\icons\font_add.png" />
+    <Content Include="Content\Bliss\Images\icons\font_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\font_go.png" />
+    <Content Include="Content\Bliss\Images\icons\green_thumb_up.png" />
+    <Content Include="Content\Bliss\Images\icons\group.png" />
+    <Content Include="Content\Bliss\Images\icons\group_add.png" />
+    <Content Include="Content\Bliss\Images\icons\group_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\group_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\group_error.png" />
+    <Content Include="Content\Bliss\Images\icons\group_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\group_go.png" />
+    <Content Include="Content\Bliss\Images\icons\group_key.png" />
+    <Content Include="Content\Bliss\Images\icons\group_link.png" />
+    <Content Include="Content\Bliss\Images\icons\heart.png" />
+    <Content Include="Content\Bliss\Images\icons\heart_add.png" />
+    <Content Include="Content\Bliss\Images\icons\heart_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\help.png" />
+    <Content Include="Content\Bliss\Images\icons\hourglass.png" />
+    <Content Include="Content\Bliss\Images\icons\hourglass_add.png" />
+    <Content Include="Content\Bliss\Images\icons\hourglass_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\hourglass_go.png" />
+    <Content Include="Content\Bliss\Images\icons\hourglass_link.png" />
+    <Content Include="Content\Bliss\Images\icons\house.png" />
+    <Content Include="Content\Bliss\Images\icons\house_go.png" />
+    <Content Include="Content\Bliss\Images\icons\house_link.png" />
+    <Content Include="Content\Bliss\Images\icons\html.png" />
+    <Content Include="Content\Bliss\Images\icons\html_add.png" />
+    <Content Include="Content\Bliss\Images\icons\html_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\html_go.png" />
+    <Content Include="Content\Bliss\Images\icons\html_valid.png" />
+    <Content Include="Content\Bliss\Images\icons\image.png" />
+    <Content Include="Content\Bliss\Images\icons\images.png" />
+    <Content Include="Content\Bliss\Images\icons\image_add.png" />
+    <Content Include="Content\Bliss\Images\icons\image_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\image_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\image_link.png" />
+    <Content Include="Content\Bliss\Images\icons\information.png" />
+    <Content Include="Content\Bliss\Images\icons\ipod.png" />
+    <Content Include="Content\Bliss\Images\icons\ipod_cast.png" />
+    <Content Include="Content\Bliss\Images\icons\ipod_cast_add.png" />
+    <Content Include="Content\Bliss\Images\icons\ipod_cast_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\ipod_sound.png" />
+    <Content Include="Content\Bliss\Images\icons\joystick.png" />
+    <Content Include="Content\Bliss\Images\icons\joystick_add.png" />
+    <Content Include="Content\Bliss\Images\icons\joystick_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\joystick_error.png" />
+    <Content Include="Content\Bliss\Images\icons\key.png" />
+    <Content Include="Content\Bliss\Images\icons\keyboard.png" />
+    <Content Include="Content\Bliss\Images\icons\keyboard_add.png" />
+    <Content Include="Content\Bliss\Images\icons\keyboard_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\keyboard_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\key_add.png" />
+    <Content Include="Content\Bliss\Images\icons\key_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\key_go.png" />
+    <Content Include="Content\Bliss\Images\icons\layers.png" />
+    <Content Include="Content\Bliss\Images\icons\layout.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_add.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_content.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_error.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_header.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_link.png" />
+    <Content Include="Content\Bliss\Images\icons\layout_sidebar.png" />
+    <Content Include="Content\Bliss\Images\icons\lightbulb.png" />
+    <Content Include="Content\Bliss\Images\icons\lightbulb_add.png" />
+    <Content Include="Content\Bliss\Images\icons\lightbulb_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\lightbulb_off.png" />
+    <Content Include="Content\Bliss\Images\icons\lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\lightning_add.png" />
+    <Content Include="Content\Bliss\Images\icons\lightning_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\lightning_go.png" />
+    <Content Include="Content\Bliss\Images\icons\link.png" />
+    <Content Include="Content\Bliss\Images\icons\link_add.png" />
+    <Content Include="Content\Bliss\Images\icons\link_break.png" />
+    <Content Include="Content\Bliss\Images\icons\link_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\link_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\link_error.png" />
+    <Content Include="Content\Bliss\Images\icons\link_go.png" />
+    <Content Include="Content\Bliss\Images\icons\lock.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_add.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_break.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_go.png" />
+    <Content Include="Content\Bliss\Images\icons\lock_open.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_add.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_error.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_flatbed.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_go.png" />
+    <Content Include="Content\Bliss\Images\icons\lorry_link.png" />
+    <Content Include="Content\Bliss\Images\icons\magifier_zoom_out.png" />
+    <Content Include="Content\Bliss\Images\icons\magnifier.png" />
+    <Content Include="Content\Bliss\Images\icons\magnifier_zoom_in.png" />
+    <Content Include="Content\Bliss\Images\icons\male.png" />
+    <Content Include="Content\Bliss\Images\icons\map.png" />
+    <Content Include="Content\Bliss\Images\icons\map_add.png" />
+    <Content Include="Content\Bliss\Images\icons\map_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\map_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\map_go.png" />
+    <Content Include="Content\Bliss\Images\icons\map_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_bronze_1.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_bronze_2.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_bronze_3.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_bronze_add.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_bronze_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_gold_1.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_gold_2.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_gold_3.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_gold_add.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_gold_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_silver_1.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_silver_2.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_silver_3.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_silver_add.png" />
+    <Content Include="Content\Bliss\Images\icons\medal_silver_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\money.png" />
+    <Content Include="Content\Bliss\Images\icons\money_add.png" />
+    <Content Include="Content\Bliss\Images\icons\money_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\money_dollar.png" />
+    <Content Include="Content\Bliss\Images\icons\money_euro.png" />
+    <Content Include="Content\Bliss\Images\icons\money_pound.png" />
+    <Content Include="Content\Bliss\Images\icons\money_yen.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_add.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_error.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_go.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\monitor_link.png" />
+    <Content Include="Content\Bliss\Images\icons\mouse.png" />
+    <Content Include="Content\Bliss\Images\icons\mouse_add.png" />
+    <Content Include="Content\Bliss\Images\icons\mouse_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\mouse_error.png" />
+    <Content Include="Content\Bliss\Images\icons\music.png" />
+    <Content Include="Content\Bliss\Images\icons\new.png" />
+    <Content Include="Content\Bliss\Images\icons\newspaper.png" />
+    <Content Include="Content\Bliss\Images\icons\newspaper_add.png" />
+    <Content Include="Content\Bliss\Images\icons\newspaper_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\newspaper_go.png" />
+    <Content Include="Content\Bliss\Images\icons\newspaper_link.png" />
+    <Content Include="Content\Bliss\Images\icons\note.png" />
+    <Content Include="Content\Bliss\Images\icons\note_add.png" />
+    <Content Include="Content\Bliss\Images\icons\note_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\note_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\note_error.png" />
+    <Content Include="Content\Bliss\Images\icons\note_go.png" />
+    <Content Include="Content\Bliss\Images\icons\overlays.png" />
+    <Content Include="Content\Bliss\Images\icons\package.png" />
+    <Content Include="Content\Bliss\Images\icons\package_add.png" />
+    <Content Include="Content\Bliss\Images\icons\package_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\package_go.png" />
+    <Content Include="Content\Bliss\Images\icons\package_green.png" />
+    <Content Include="Content\Bliss\Images\icons\package_link.png" />
+    <Content Include="Content\Bliss\Images\icons\page.png" />
+    <Content Include="Content\Bliss\Images\icons\page_add.png" />
+    <Content Include="Content\Bliss\Images\icons\page_attach.png" />
+    <Content Include="Content\Bliss\Images\icons\page_code.png" />
+    <Content Include="Content\Bliss\Images\icons\page_copy.png" />
+    <Content Include="Content\Bliss\Images\icons\page_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\page_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\page_error.png" />
+    <Content Include="Content\Bliss\Images\icons\page_excel.png" />
+    <Content Include="Content\Bliss\Images\icons\page_find.png" />
+    <Content Include="Content\Bliss\Images\icons\page_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\page_go.png" />
+    <Content Include="Content\Bliss\Images\icons\page_green.png" />
+    <Content Include="Content\Bliss\Images\icons\page_key.png" />
+    <Content Include="Content\Bliss\Images\icons\page_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\page_link.png" />
+    <Content Include="Content\Bliss\Images\icons\page_paintbrush.png" />
+    <Content Include="Content\Bliss\Images\icons\page_paste.png" />
+    <Content Include="Content\Bliss\Images\icons\page_red.png" />
+    <Content Include="Content\Bliss\Images\icons\page_refresh.png" />
+    <Content Include="Content\Bliss\Images\icons\page_save.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_acrobat.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_actionscript.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_add.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_c.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_camera.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_cd.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_code.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_code_red.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_coldfusion.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_compressed.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_copy.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_cplusplus.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_csharp.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_cup.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_database.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_dvd.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_error.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_excel.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_find.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_flash.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_freehand.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_get.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_go.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_h.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_horizontal.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_key.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_link.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_medal.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_office.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_paint.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_paintbrush.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_paste.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_php.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_picture.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_powerpoint.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_put.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_ruby.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_stack.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_star.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_swoosh.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_text.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_text_width.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_tux.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_vector.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_visualstudio.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_width.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_word.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_world.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_wrench.png" />
+    <Content Include="Content\Bliss\Images\icons\page_white_zip.png" />
+    <Content Include="Content\Bliss\Images\icons\page_word.png" />
+    <Content Include="Content\Bliss\Images\icons\page_world.png" />
+    <Content Include="Content\Bliss\Images\icons\paintbrush.png" />
+    <Content Include="Content\Bliss\Images\icons\paintcan.png" />
+    <Content Include="Content\Bliss\Images\icons\palette.png" />
+    <Content Include="Content\Bliss\Images\icons\paste_plain.png" />
+    <Content Include="Content\Bliss\Images\icons\paste_word.png" />
+    <Content Include="Content\Bliss\Images\icons\pencil.png" />
+    <Content Include="Content\Bliss\Images\icons\pencil_add.png" />
+    <Content Include="Content\Bliss\Images\icons\pencil_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\pencil_go.png" />
+    <Content Include="Content\Bliss\Images\icons\phone.png" />
+    <Content Include="Content\Bliss\Images\icons\phone_add.png" />
+    <Content Include="Content\Bliss\Images\icons\phone_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\phone_sound.png" />
+    <Content Include="Content\Bliss\Images\icons\photo.png" />
+    <Content Include="Content\Bliss\Images\icons\photos.png" />
+    <Content Include="Content\Bliss\Images\icons\photo_add.png" />
+    <Content Include="Content\Bliss\Images\icons\photo_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\photo_link.png" />
+    <Content Include="Content\Bliss\Images\icons\picture.png" />
+    <Content Include="Content\Bliss\Images\icons\pictures.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_add.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_empty.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_error.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_go.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_key.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_link.png" />
+    <Content Include="Content\Bliss\Images\icons\picture_save.png" />
+    <Content Include="Content\Bliss\Images\icons\pilcrow.png" />
+    <Content Include="Content\Bliss\Images\icons\pill.png" />
+    <Content Include="Content\Bliss\Images\icons\pill_add.png" />
+    <Content Include="Content\Bliss\Images\icons\pill_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\pill_go.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_add.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_disabled.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_error.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_go.png" />
+    <Content Include="Content\Bliss\Images\icons\plugin_link.png" />
+    <Content Include="Content\Bliss\Images\icons\printer.png" />
+    <Content Include="Content\Bliss\Images\icons\printer_add.png" />
+    <Content Include="Content\Bliss\Images\icons\printer_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\printer_empty.png" />
+    <Content Include="Content\Bliss\Images\icons\printer_error.png" />
+    <Content Include="Content\Bliss\Images\icons\rainbow.png" />
+    <Content Include="Content\Bliss\Images\icons\report.png" />
+    <Content Include="Content\Bliss\Images\icons\report_add.png" />
+    <Content Include="Content\Bliss\Images\icons\report_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\report_disk.png" />
+    <Content Include="Content\Bliss\Images\icons\report_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\report_go.png" />
+    <Content Include="Content\Bliss\Images\icons\report_key.png" />
+    <Content Include="Content\Bliss\Images\icons\report_link.png" />
+    <Content Include="Content\Bliss\Images\icons\report_magnify.png" />
+    <Content Include="Content\Bliss\Images\icons\report_picture.png" />
+    <Content Include="Content\Bliss\Images\icons\report_user.png" />
+    <Content Include="Content\Bliss\Images\icons\report_word.png" />
+    <Content Include="Content\Bliss\Images\icons\resultset_first.png" />
+    <Content Include="Content\Bliss\Images\icons\resultset_last.png" />
+    <Content Include="Content\Bliss\Images\icons\resultset_next.png" />
+    <Content Include="Content\Bliss\Images\icons\resultset_previous.png" />
+    <Content Include="Content\Bliss\Images\icons\rosette.png" />
+    <Content Include="Content\Bliss\Images\icons\rss.png" />
+    <Content Include="Content\Bliss\Images\icons\rss_add.png" />
+    <Content Include="Content\Bliss\Images\icons\rss_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\rss_go.png" />
+    <Content Include="Content\Bliss\Images\icons\rss_valid.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_add.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_get.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_go.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_key.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_link.png" />
+    <Content Include="Content\Bliss\Images\icons\ruby_put.png" />
+    <Content Include="Content\Bliss\Images\icons\script.png" />
+    <Content Include="Content\Bliss\Images\icons\script_add.png" />
+    <Content Include="Content\Bliss\Images\icons\script_code.png" />
+    <Content Include="Content\Bliss\Images\icons\script_code_red.png" />
+    <Content Include="Content\Bliss\Images\icons\script_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\script_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\script_error.png" />
+    <Content Include="Content\Bliss\Images\icons\script_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\script_go.png" />
+    <Content Include="Content\Bliss\Images\icons\script_key.png" />
+    <Content Include="Content\Bliss\Images\icons\script_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\script_link.png" />
+    <Content Include="Content\Bliss\Images\icons\script_palette.png" />
+    <Content Include="Content\Bliss\Images\icons\script_save.png" />
+    <Content Include="Content\Bliss\Images\icons\server.png" />
+    <Content Include="Content\Bliss\Images\icons\server_add.png" />
+    <Content Include="Content\Bliss\Images\icons\server_chart.png" />
+    <Content Include="Content\Bliss\Images\icons\server_compressed.png" />
+    <Content Include="Content\Bliss\Images\icons\server_connect.png" />
+    <Content Include="Content\Bliss\Images\icons\server_database.png" />
+    <Content Include="Content\Bliss\Images\icons\server_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\server_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\server_error.png" />
+    <Content Include="Content\Bliss\Images\icons\server_go.png" />
+    <Content Include="Content\Bliss\Images\icons\server_key.png" />
+    <Content Include="Content\Bliss\Images\icons\server_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\server_link.png" />
+    <Content Include="Content\Bliss\Images\icons\server_uncompressed.png" />
+    <Content Include="Content\Bliss\Images\icons\shading.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_bottom.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_center.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_left.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_middle.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_right.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_align_top.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_flip_horizontal.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_flip_vertical.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_group.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_handles.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_move_back.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_move_backwards.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_move_forwards.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_move_front.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_rotate_anticlockwise.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_rotate_clockwise.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_add.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_error.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_go.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_key.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_square_link.png" />
+    <Content Include="Content\Bliss\Images\icons\shape_ungroup.png" />
+    <Content Include="Content\Bliss\Images\icons\shield.png" />
+    <Content Include="Content\Bliss\Images\icons\shield_add.png" />
+    <Content Include="Content\Bliss\Images\icons\shield_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\shield_go.png" />
+    <Content Include="Content\Bliss\Images\icons\sitemap.png" />
+    <Content Include="Content\Bliss\Images\icons\sitemap_color.png" />
+    <Content Include="Content\Bliss\Images\icons\smallhelp.png" />
+    <Content Include="Content\Bliss\Images\icons\sound.png" />
+    <Content Include="Content\Bliss\Images\icons\sound_add.png" />
+    <Content Include="Content\Bliss\Images\icons\sound_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\sound_low.png" />
+    <Content Include="Content\Bliss\Images\icons\sound_mute.png" />
+    <Content Include="Content\Bliss\Images\icons\sound_none.png" />
+    <Content Include="Content\Bliss\Images\icons\spellcheck.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_8ball.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_basketball.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_football.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_golf.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_raquet.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_shuttlecock.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_soccer.png" />
+    <Content Include="Content\Bliss\Images\icons\sport_tennis.png" />
+    <Content Include="Content\Bliss\Images\icons\star.png" />
+    <Content Include="Content\Bliss\Images\icons\status_away.png" />
+    <Content Include="Content\Bliss\Images\icons\status_busy.png" />
+    <Content Include="Content\Bliss\Images\icons\status_offline.png" />
+    <Content Include="Content\Bliss\Images\icons\status_online.png" />
+    <Content Include="Content\Bliss\Images\icons\stop.png" />
+    <Content Include="Content\Bliss\Images\icons\style.png" />
+    <Content Include="Content\Bliss\Images\icons\style_add.png" />
+    <Content Include="Content\Bliss\Images\icons\style_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\style_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\style_go.png" />
+    <Content Include="Content\Bliss\Images\icons\sum.png" />
+    <Content Include="Content\Bliss\Images\icons\tab.png" />
+    <Content Include="Content\Bliss\Images\icons\table.png" />
+    <Content Include="Content\Bliss\Images\icons\table_add.png" />
+    <Content Include="Content\Bliss\Images\icons\table_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\table_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\table_error.png" />
+    <Content Include="Content\Bliss\Images\icons\table_gear.png" />
+    <Content Include="Content\Bliss\Images\icons\table_go.png" />
+    <Content Include="Content\Bliss\Images\icons\table_key.png" />
+    <Content Include="Content\Bliss\Images\icons\table_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\table_link.png" />
+    <Content Include="Content\Bliss\Images\icons\table_multiple.png" />
+    <Content Include="Content\Bliss\Images\icons\table_refresh.png" />
+    <Content Include="Content\Bliss\Images\icons\table_relationship.png" />
+    <Content Include="Content\Bliss\Images\icons\table_row_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\table_row_insert.png" />
+    <Content Include="Content\Bliss\Images\icons\table_save.png" />
+    <Content Include="Content\Bliss\Images\icons\table_sort.png" />
+    <Content Include="Content\Bliss\Images\icons\tab_add.png" />
+    <Content Include="Content\Bliss\Images\icons\tab_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\tab_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\tab_go.png" />
+    <Content Include="Content\Bliss\Images\icons\tag.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_blue_add.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_blue_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_blue_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_green.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_pink.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_purple.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_red.png" />
+    <Content Include="Content\Bliss\Images\icons\tag_yellow.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_add.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_error.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_go.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_key.png" />
+    <Content Include="Content\Bliss\Images\icons\telephone_link.png" />
+    <Content Include="Content\Bliss\Images\icons\television.png" />
+    <Content Include="Content\Bliss\Images\icons\television_add.png" />
+    <Content Include="Content\Bliss\Images\icons\television_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\textfield.png" />
+    <Content Include="Content\Bliss\Images\icons\textfield_add.png" />
+    <Content Include="Content\Bliss\Images\icons\textfield_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\textfield_key.png" />
+    <Content Include="Content\Bliss\Images\icons\textfield_rename.png" />
+    <Content Include="Content\Bliss\Images\icons\text_align_center.png" />
+    <Content Include="Content\Bliss\Images\icons\text_align_justify.png" />
+    <Content Include="Content\Bliss\Images\icons\text_align_left.png" />
+    <Content Include="Content\Bliss\Images\icons\text_align_right.png" />
+    <Content Include="Content\Bliss\Images\icons\text_allcaps.png" />
+    <Content Include="Content\Bliss\Images\icons\text_bold.png" />
+    <Content Include="Content\Bliss\Images\icons\text_columns.png" />
+    <Content Include="Content\Bliss\Images\icons\text_dropcaps.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_1.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_2.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_3.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_4.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_5.png" />
+    <Content Include="Content\Bliss\Images\icons\text_heading_6.png" />
+    <Content Include="Content\Bliss\Images\icons\text_horizontalrule.png" />
+    <Content Include="Content\Bliss\Images\icons\text_indent.png" />
+    <Content Include="Content\Bliss\Images\icons\text_indent_remove.png" />
+    <Content Include="Content\Bliss\Images\icons\text_italic.png" />
+    <Content Include="Content\Bliss\Images\icons\text_kerning.png" />
+    <Content Include="Content\Bliss\Images\icons\text_letterspacing.png" />
+    <Content Include="Content\Bliss\Images\icons\text_letter_omega.png" />
+    <Content Include="Content\Bliss\Images\icons\text_linespacing.png" />
+    <Content Include="Content\Bliss\Images\icons\text_list_bullets.png" />
+    <Content Include="Content\Bliss\Images\icons\text_list_numbers.png" />
+    <Content Include="Content\Bliss\Images\icons\text_lowercase.png" />
+    <Content Include="Content\Bliss\Images\icons\text_padding_bottom.png" />
+    <Content Include="Content\Bliss\Images\icons\text_padding_left.png" />
+    <Content Include="Content\Bliss\Images\icons\text_padding_right.png" />
+    <Content Include="Content\Bliss\Images\icons\text_padding_top.png" />
+    <Content Include="Content\Bliss\Images\icons\text_replace.png" />
+    <Content Include="Content\Bliss\Images\icons\text_signature.png" />
+    <Content Include="Content\Bliss\Images\icons\text_smallcaps.png" />
+    <Content Include="Content\Bliss\Images\icons\text_strikethrough.png" />
+    <Content Include="Content\Bliss\Images\icons\text_subscript.png" />
+    <Content Include="Content\Bliss\Images\icons\text_superscript.png" />
+    <Content Include="Content\Bliss\Images\icons\text_underline.png" />
+    <Content Include="Content\Bliss\Images\icons\text_uppercase.png" />
+    <Content Include="Content\Bliss\Images\icons\thumb_down.png" />
+    <Content Include="Content\Bliss\Images\icons\thumb_up.png" />
+    <Content Include="Content\Bliss\Images\icons\tick.png" />
+    <Content Include="Content\Bliss\Images\icons\time.png" />
+    <Content Include="Content\Bliss\Images\icons\timeline_marker.png" />
+    <Content Include="Content\Bliss\Images\icons\time_add.png" />
+    <Content Include="Content\Bliss\Images\icons\time_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\time_go.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_add.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_blue.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_error.png" />
+    <Content Include="Content\Bliss\Images\icons\transmit_go.png" />
+    <Content Include="Content\Bliss\Images\icons\tux.png" />
+    <Content Include="Content\Bliss\Images\icons\upload.gif" />
+    <Content Include="Content\Bliss\Images\icons\user.png" />
+    <Content Include="Content\Bliss\Images\icons\user_add.png" />
+    <Content Include="Content\Bliss\Images\icons\user_comment.png" />
+    <Content Include="Content\Bliss\Images\icons\user_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\user_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\user_female.png" />
+    <Content Include="Content\Bliss\Images\icons\user_go.png" />
+    <Content Include="Content\Bliss\Images\icons\user_gray.png" />
+    <Content Include="Content\Bliss\Images\icons\user_green.png" />
+    <Content Include="Content\Bliss\Images\icons\user_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\user_red.png" />
+    <Content Include="Content\Bliss\Images\icons\user_suit.png" />
+    <Content Include="Content\Bliss\Images\icons\vcard.png" />
+    <Content Include="Content\Bliss\Images\icons\vcard_add.png" />
+    <Content Include="Content\Bliss\Images\icons\vcard_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\vcard_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\vector.png" />
+    <Content Include="Content\Bliss\Images\icons\vector_add.png" />
+    <Content Include="Content\Bliss\Images\icons\vector_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\wand.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_clouds.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_cloudy.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_lightning.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_rain.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_snow.png" />
+    <Content Include="Content\Bliss\Images\icons\weather_sun.png" />
+    <Content Include="Content\Bliss\Images\icons\webcam.png" />
+    <Content Include="Content\Bliss\Images\icons\webcam_add.png" />
+    <Content Include="Content\Bliss\Images\icons\webcam_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\webcam_error.png" />
+    <Content Include="Content\Bliss\Images\icons\webform.png" />
+    <Content Include="Content\Bliss\Images\icons\world.png" />
+    <Content Include="Content\Bliss\Images\icons\world_add.png" />
+    <Content Include="Content\Bliss\Images\icons\world_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\world_edit.png" />
+    <Content Include="Content\Bliss\Images\icons\world_go.png" />
+    <Content Include="Content\Bliss\Images\icons\world_link.png" />
+    <Content Include="Content\Bliss\Images\icons\wrench.png" />
+    <Content Include="Content\Bliss\Images\icons\wrench_orange.png" />
+    <Content Include="Content\Bliss\Images\icons\xhtml.png" />
+    <Content Include="Content\Bliss\Images\icons\xhtml_add.png" />
+    <Content Include="Content\Bliss\Images\icons\xhtml_delete.png" />
+    <Content Include="Content\Bliss\Images\icons\xhtml_go.png" />
+    <Content Include="Content\Bliss\Images\icons\xhtml_valid.png" />
+    <Content Include="Content\Bliss\Images\icons\zoom.png" />
+    <Content Include="Content\Bliss\Images\icons\zoom_in.png" />
+    <Content Include="Content\Bliss\Images\icons\zoom_out.png" />
+    <Content Include="Content\Bliss\Images\logo.png" />
+    <Content Include="Content\Bliss\Images\page-footer-cap-content-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\page-footer-cap-left-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\page-footer-cap-right-colour-bg.gif" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-active-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-active-nest-bg.gif" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-active-nest-bullet-bg.gif" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-active-nest-capbottom-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-active-nest-captop-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-button-inactive-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-content-bg.gif" />
+    <Content Include="Content\Bliss\Images\primary-navigation-home-button-active-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-home-button-inactive-bg.png" />
+    <Content Include="Content\Bliss\Images\primary-navigation-left-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\primary-navigation-right-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\sample-gallery-image.jpg" />
+    <Content Include="Content\Bliss\Images\search-form-field-bg.png" />
+    <Content Include="Content\Bliss\Images\sub-navigation-content-bg.gif" />
+    <Content Include="Content\Bliss\Images\sub-navigation-left-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\sub-navigation-right-cap-bg.gif" />
+    <Content Include="Content\Bliss\Images\tab-active-left-bg.png" />
+    <Content Include="Content\Bliss\Images\tab-active-right-bg.png" />
+    <Content Include="Content\Bliss\Images\tab-colour-left-bg.png" />
+    <Content Include="Content\Bliss\Images\tab-colour-right-bg.png" />
+    <Content Include="Content\Bliss\Images\tab-grey-left-bg.png" />
+    <Content Include="Content\Bliss\Images\tab-grey-right-bg.png" />
+    <Content Include="Content\Bliss\Images\table-thead-bg.jpg" />
+    <Content Include="Content\Bliss\Images\warning-icon.png" />
+    <Content Include="Content\Bliss\template.html" />
+    <Content Include="Content\CSSShared\Base.css" />
+    <Content Include="Content\CSSShared\UPF.css" />
+    <Content Include="Content\css\cagov.core.css" />
+    <Content Include="Content\css\colorscheme-oceanside.css" />
+    <Content Include="Content\css\colorscheme-orangecounty.css" />
+    <Content Include="Content\css\colorscheme-pasorobles.css" />
+    <Content Include="Content\css\colorscheme-santabarbara.css" />
+    <Content Include="Content\css\colorscheme-sierra.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\icon-fonts-ie7.css" />
+    <Content Include="Content\fonts\CaGov.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\banner\banner-blank.png" />
+    <Content Include="Content\Images\banner\banner-gal.png" />
+    <Content Include="Content\Images\banner\banner-guy.png" />
+    <Content Include="Content\Images\fancybox\blank.gif" />
+    <Content Include="Content\Images\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\Images\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\Images\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\Images\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\Images\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\Images\loading.gif" />
+    <Content Include="Content\Images\template2014\apple-touch-icon-114x114.png" />
+    <Content Include="Content\Images\template2014\apple-touch-icon-144x144.png" />
+    <Content Include="Content\Images\template2014\apple-touch-icon-57x57.png" />
+    <Content Include="Content\Images\template2014\apple-touch-icon-72x72.png" />
+    <Content Include="Content\Images\template2014\bullet-blue-disc-open.png" />
+    <Content Include="Content\Images\template2014\bullet-blue-disc.png" />
+    <Content Include="Content\Images\template2014\bullet-gray-arrow.png" />
+    <Content Include="Content\Images\template2014\CalEPALogo.png" />
+    <Content Include="Content\Images\template2014\clear.gif" />
+    <Content Include="Content\Images\template2014\header-ca.gov.png" />
+    <Content Include="Content\Images\template2014\header-organization.png" />
+    <Content Include="Content\Images\template2014\nav-down-arrow.png" />
+    <Content Include="Content\Images\template2014\nav-shadow.png" />
+    <Content Include="Content\Images\template2014\oceanside\2column-bg.png" />
+    <Content Include="Content\Images\template2014\oceanside\body-background.png" />
+    <Content Include="Content\Images\template2014\oceanside\footer-bg.png" />
+    <Content Include="Content\Images\template2014\oceanside\header-background.jpg" />
+    <Content Include="Content\Images\template2014\oceanside\megadropdown-ribbon.png" />
+    <Content Include="Content\Images\template2014\oceanside\panel-standout-triangle.png" />
+    <Content Include="Content\Images\template2014\oceanside\ribbon-home.png" />
+    <Content Include="Content\Images\template2014\oceanside\ribbon-two-col.png" />
+    <Content Include="Content\Images\template2014\oceanside\ribbon.png" />
+    <Content Include="Content\Images\template2014\orangecounty\2column-bg.png" />
+    <Content Include="Content\Images\template2014\orangecounty\body-background.png" />
+    <Content Include="Content\Images\template2014\orangecounty\footer-bg.png" />
+    <Content Include="Content\Images\template2014\orangecounty\header-background.jpg" />
+    <Content Include="Content\Images\template2014\orangecounty\megadropdown-ribbon.png" />
+    <Content Include="Content\Images\template2014\orangecounty\panel-standout-triangle.png" />
+    <Content Include="Content\Images\template2014\orangecounty\ribbon-home.png" />
+    <Content Include="Content\Images\template2014\orangecounty\ribbon-two-col.png" />
+    <Content Include="Content\Images\template2014\orangecounty\ribbon.png" />
+    <Content Include="Content\Images\template2014\pasorobles\2column-bg.png" />
+    <Content Include="Content\Images\template2014\pasorobles\body-background.png" />
+    <Content Include="Content\Images\template2014\pasorobles\footer-bg.png" />
+    <Content Include="Content\Images\template2014\pasorobles\header-background.jpg" />
+    <Content Include="Content\Images\template2014\pasorobles\megadropdown-ribbon.png" />
+    <Content Include="Content\Images\template2014\pasorobles\panel-standout-triangle.png" />
+    <Content Include="Content\Images\template2014\pasorobles\ribbon-home.png" />
+    <Content Include="Content\Images\template2014\pasorobles\ribbon-two-col.png" />
+    <Content Include="Content\Images\template2014\pasorobles\ribbon.png" />
+    <Content Include="Content\Images\template2014\santabarbara\2column-bg.png" />
+    <Content Include="Content\Images\template2014\santabarbara\body-background.png" />
+    <Content Include="Content\Images\template2014\santabarbara\footer-bg.png" />
+    <Content Include="Content\Images\template2014\santabarbara\header-background.jpg" />
+    <Content Include="Content\Images\template2014\santabarbara\megadropdown-ribbon.png" />
+    <Content Include="Content\Images\template2014\santabarbara\panel-standout-triangle.png" />
+    <Content Include="Content\Images\template2014\santabarbara\ribbon-home.png" />
+    <Content Include="Content\Images\template2014\santabarbara\ribbon-two-col.png" />
+    <Content Include="Content\Images\template2014\santabarbara\ribbon.png" />
+    <Content Include="Content\Images\template2014\sierra\2column-bg.png" />
+    <Content Include="Content\Images\template2014\sierra\body-background.png" />
+    <Content Include="Content\Images\template2014\sierra\footer-bg.png" />
+    <Content Include="Content\Images\template2014\sierra\header-background.jpg" />
+    <Content Include="Content\Images\template2014\sierra\megadropdown-ribbon.png" />
+    <Content Include="Content\Images\template2014\sierra\panel-standout-triangle.png" />
+    <Content Include="Content\Images\template2014\sierra\ribbon-home.png" />
+    <Content Include="Content\Images\template2014\sierra\ribbon-two-col.png" />
+    <Content Include="Content\Images\template2014\sierra\ribbon.png" />
+    <Content Include="Content\Images\Warning48.png" />
+    <Content Include="Content\js\cagov.core.js" />
+    <Content Include="Content\js\CERSUIScripts.js" />
+    <Content Include="Content\kendo\2013.2.716\Black\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Black\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Black\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Black\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Black\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Black\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Black\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Black\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Black\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\BlueOpal\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Bootstrap\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Default\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Default\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Default\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Default\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Default\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Default\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Default\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Default\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Default\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Flat\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Flat\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Flat\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Flat\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Flat\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Flat\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Flat\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Flat\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Flat\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\HighContrast\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\images\back.png" />
+    <Content Include="Content\kendo\2013.2.716\images\wp8_icons.png" />
+    <Content Include="Content\kendo\2013.2.716\images\wp8_inverseicons.png" />
+    <Content Include="Content\kendo\2013.2.716\kendo.black.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.blueopal.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.bootstrap.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.common.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.black.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.blueopal.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.bootstrap.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.default.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.flat.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.highcontrast.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.metro.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.metroblack.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.moonlight.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.silver.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.dataviz.uniform.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.default.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.flat.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.highcontrast.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.icenium.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.metro.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.metroblack.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.all.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.android4.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.blackberry.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.common.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.flat.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.icenium.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.ios.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.meego.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.mobile.wp8.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.moonlight.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.rtl.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.silver.min.css" />
+    <Content Include="Content\kendo\2013.2.716\kendo.uniform.min.css" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\MetroBlack\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Metro\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Metro\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Metro\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Metro\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Metro\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Metro\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Metro\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Metro\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Metro\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Moonlight\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\Silver\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Silver\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Silver\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Silver\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Silver\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Silver\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Silver\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Silver\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Silver\sprite_2x.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\brushed-metal.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots1.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots10.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots11.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots12.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots13.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots2.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots3.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots4.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots5.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots6.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots7.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots8.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\dots9.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\glass-lighter.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\glass.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\highlight.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\hsv-gradient.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\hue.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\leather1.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\leather2.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\noise.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe1.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe2.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe3.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe4.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe5.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\stripe6.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\transparency.png" />
+    <Content Include="Content\kendo\2013.2.716\textures\transtexture.png" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\editor.png" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\imagebrowser.png" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\loading-image.gif" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\loading.gif" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\loading_2x.gif" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\slider-h.gif" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\slider-v.gif" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\sprite.png" />
+    <Content Include="Content\kendo\2013.2.716\Uniform\sprite_2x.png" />
+    <Content Include="Content\libs\html5shiv\html5shiv.min.js" />
+    <Content Include="Content\libs\icon-fonts-ie7\icon-fonts-ie7.js" />
+    <Content Include="Content\libs\jquery\jquery-1.11.1.min.js" />
+    <Content Include="Content\libs\modernizr\modernizr-2.0.6.min.js" />
+    <Content Include="Content\libs\respond\respond.min.js" />
+    <Content Include="Content\libs\selectivizr\selectivizr-min.js" />
+    <Content Include="Content\Statistics\CERSSignIns.png" />
+    <Content Include="Content\Statistics\KeyCERSStats.png" />
+    <Content Include="Content\Statistics\MonthlyDocUploadCounts.png" />
+    <Content Include="Content\Statistics\MonthlySubmittalCounts.png" />
+    <Content Include="Content\Statistics\ReviewedSubmittalsElements.png" />
+    <Content Include="Content\TelerikCustom\cers.common.css" />
+    <Content Include="Content\TelerikCustom\cers.default.css" />
+    <Content Include="Content\TelerikCustom\cers.simple.css" />
+    <Content Include="Content\TelerikCustom\Default\editor.png" />
+    <Content Include="Content\TelerikCustom\Default\imagebrowser.png" />
+    <Content Include="Content\TelerikCustom\Default\loading.gif" />
+    <Content Include="Content\TelerikCustom\Default\slider-h.gif" />
+    <Content Include="Content\TelerikCustom\Default\slider-v.gif" />
+    <Content Include="Content\TelerikCustom\Default\sprite-vertical.png" />
+    <Content Include="Content\TelerikCustom\Default\sprite.png" />
+    <Content Include="Content\TelerikCustom\Default\treeview-line.png" />
+    <Content Include="Content\TelerikCustom\Default\treeview-nodes-rtl.png" />
+    <Content Include="Content\TelerikCustom\Default\treeview-nodes.png" />
+    <Content Include="Content\TelerikCustom\Simple\editor.png" />
+    <Content Include="Content\TelerikCustom\Simple\imagebrowser.png" />
+    <Content Include="Content\TelerikCustom\Simple\loading.gif" />
+    <Content Include="Content\TelerikCustom\Simple\slider-h.gif" />
+    <Content Include="Content\TelerikCustom\Simple\slider-v.gif" />
+    <Content Include="Content\TelerikCustom\Simple\sprite-vertical.png" />
+    <Content Include="Content\TelerikCustom\Simple\sprite.png" />
+    <Content Include="Content\TelerikCustom\Simple\treeview-line.png" />
+    <Content Include="Content\TelerikCustom\Simple\treeview-nodes-rtl.png" />
+    <Content Include="Content\TelerikCustom\Simple\treeview-nodes.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\2013.2.611\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\2013.2.611\jquery.validate.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.all.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.autocomplete.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.calendar.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.chart.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.combobox.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.common.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.datepicker.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.datetimepicker.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.draganddrop.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.editor.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.editing.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.filtering.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.grouping.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.reordering.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.grid.resizing.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.imagebrowser.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.list.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.menu.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.panelbar.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.slider.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.splitter.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.tabstrip.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.textbox.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.timepicker.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.treeview.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.upload.min.js" />
+    <Content Include="Scripts\2013.2.611\telerik.window.min.js" />
+    <Content Include="Scripts\CERSUIScripts.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Content\kendo\2013.2.716\images\KendoUI.ttf" />
+    <Content Include="Content\kendo\2013.2.716\images\KendoUI.woff" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\jQuery.download.js" />
+    <Content Include="Scripts\jquery.jixedbar.min.js" />
+    <Content Include="Scripts\jquery.spin.js" />
+    <Content Include="Scripts\jquery.timers.js" />
+    <Content Include="Scripts\jquery.tools.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\kendo.modernizr.custom.js" />
+    <Content Include="Scripts\kendo\2013.2.716\jquery.min.js" />
+    <Content Include="Content\DataRegistryDocs\CDR_DataElementExport_T27UPDD3_00.xls" />
+    <Content Include="Content\DataRegistryDocs\CDR_DataElementExport_UPDD3_10.xls" />
+    <Content Include="Content\DataRegistryDocs\UPDataDictChangesSummaryNov2011.pdf" />
+    <Content Include="Content\TemplateFiles\CUPAElectronicReportingStatsTemplate.xlsx" />
+    <Content Include="Content\fonts\CaGov.eot" />
+    <Content Include="Content\fonts\CaGov.ttf" />
+    <Content Include="Content\fonts\CaGov.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\selection.json" />
+    <Content Include="Content\Images\banner\Thumbs.db" />
+    <Content Include="Content\Images\template2014\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\Production [Web Deploy].pubxml" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.all-vsdoc.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.all.min.intellisense.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.all.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.aspnetmvc.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.autocomplete.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.binder.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.calendar.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.colorpicker.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.columnmenu.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.combobox.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.core.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.data.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.data.odata.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.data.xml.min.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.dataviz-vsdoc.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.barcode.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.canvas.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.chart.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.chart.polar.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.core.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.gauge.min.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.dataviz.min.intellisense.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.qrcode.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.sparkline.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.stock.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.svg.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.themes.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dataviz.vml.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.datepicker.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.datetimepicker.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.draganddrop.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.dropdownlist.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.editable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.editor.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.filtermenu.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.fx.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.grid.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.groupable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.imagebrowser.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.list.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.listview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.menu.min.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.mobile-vsdoc.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.actionsheet.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.application.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.button.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.buttongroup.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.drawer.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.listview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.loader.min.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.mobile.min.intellisense.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.modalview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.navbar.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.pane.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.popover.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.scroller.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.scrollview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.shim.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.splitview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.switch.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.tabstrip.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.mobile.view.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.multiselect.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.numerictextbox.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.pager.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.panelbar.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.popup.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.reorderable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.resizable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.router.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.agendaview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.dayview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.monthview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.recurrence.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.scheduler.view.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.selectable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.slider.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.sortable.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.splitter.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.tabstrip.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.timepicker.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.timezones.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.tooltip.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.touch.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.treeview.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.upload.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.userevents.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.validator.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.view.min.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.web-vsdoc.js" />
+    <None Include="Scripts\kendo\2013.2.716\kendo.web.min.intellisense.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.web.min.js" />
+    <Content Include="Scripts\kendo\2013.2.716\kendo.window.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\spin.min.js" />
+    <Content Include="Scripts\telerik.window_custom.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\DataRegistry\ElementDetail.cshtml" />
+    <Content Include="Views\DataRegistry\Index.cshtml" />
+    <Content Include="Views\DataRegistry\Search.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DataElement.cshtml" />
+    <Content Include="Views\Statistics\CUPAElectronicReportingStatus.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NullableDatePicker.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NullableDateTimePicker.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\NullableTimePicker.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
+    <None Include="Web.Development.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SharedSource\CERS.Web.Mvc\CERS.Web.Mvc.csproj">
+      <Project>{B24CAA57-4A08-4799-A2C1-81705785EC87}</Project>
+      <Name>CERS.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\CERS\CERS.csproj">
+      <Project>{3B135D0F-3E84-4A66-8B40-2DF6275CBDCD}</Project>
+      <Name>CERS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF.Core\UPF.Core.csproj">
+      <Project>{CDD94405-9FCC-4444-BCD8-CF763A18727C}</Project>
+      <Name>UPF.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF.Web.Mvc\UPF.Web.Mvc.csproj">
+      <Project>{3608AC35-9575-420B-AE22-F9F5F2560F03}</Project>
+      <Name>UPF.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF.Web\UPF.Web.csproj">
+      <Project>{FA67B341-B866-46B2-80EF-EE3F2A64B7C8}</Project>
+      <Name>UPF.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF\UPF.csproj">
+      <Project>{0ED5C9D8-6EB6-4A61-AB5D-598956399F13}</Project>
+      <Name>UPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CERS.EDT\CERS.EDT.csproj">
+      <Project>{38E20DD7-1E8D-44D7-AB8E-1FF31275B2A0}</Project>
+      <Name>CERS.EDT</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutBackup.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\Regulator.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\RegulatorDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\UPAListing.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\CUPAEvaluationDocuments.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\EnforcementSummaries.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Directory\RegulatorDocuments.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Staging.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Testing.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Training.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Statistics\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52303</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CERS.Web.UI.Public</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
