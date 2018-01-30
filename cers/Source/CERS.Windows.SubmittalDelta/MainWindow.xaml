@@ -1,0 +1,23 @@
+﻿<Window x:Class="CERS.Windows.SubmittalDelta.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Submittal Delta" Height="500" Width="640">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10 20 10 0" >
+        <StackPanel Orientation="Horizontal">
+            <Label Content="User:" Width="80"></Label>
+            <TextBox x:Name="useridTB" Height="24" Width="120"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <Label Content="Password:" Width="80"></Label>
+            <PasswordBox x:Name="passwordTB" Height="24" Width="120"></PasswordBox>
+            <Button x:Name="LoginButton" Content="Login" Height="24" Width="100" Click="LoginButton_Click" ></Button>
+        </StackPanel>
+        
+        <Label Height="24"></Label>
+        <TextBox x:Name="OutputTB" Width="600" MaxLines="20" TextWrapping="Wrap"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+        </TextBox>
+    </StackPanel>
+</Window>

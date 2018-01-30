@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CERS.Windows.SubmittalDelta.TestControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="640" SizeChanged="UserControl_SizeChanged">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left"  Margin="10 20 10 0">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="FS ID:" ></Label>
+            <TextBox x:Name="SDFsidTB" Height="24" Width="120"></TextBox>
+            <Button x:Name="SummaryDeltaButton" Content="Submittal Delta" Height="24" Width="120" Click="SummaryDeltaButton_Click"></Button>
+            <Label Width="200"></Label>
+            <Button x:Name="ClearButton" Content="Clear" Height="24" Width="80" Click="ClearButton_Click" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+            <Label Content="FSE ID:" ></Label>
+            <TextBox x:Name="SDFseidTB" Height="24" Width="120"></TextBox>
+            <Button x:Name="SummaryDeltaFSEButton" Content="Submittal Delta" Height="24" Width="120" Click="SummaryDeltaFSEButton_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
+            <Label Content="FS ID:" ></Label>
+            <TextBox x:Name="ISFsidTB" Height="24" Width="120"></TextBox>
+            <Button x:Name="InventorySummaryButton" Content="Inventory Summary" Height="24" Width="120" Click="InventorySummaryButton_Click"></Button>
+        </StackPanel>
+        
+        <Label Height="24"></Label>
+        <TextBox x:Name="OutputTB" Width="600" MaxLines="20" TextWrapping="Wrap"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+        </TextBox>
+    </StackPanel>
+</UserControl>
