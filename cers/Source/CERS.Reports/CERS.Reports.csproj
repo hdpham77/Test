@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71289D58-9B7B-4307-8DEC-603A080C1E2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CERS.Reports</RootNamespace>
+    <AssemblyName>CERS.Reports</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Testing|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Testing\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Training|AnyCPU'">
+    <OutputPath>bin\Training\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 4\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v2.0\Assemblies\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=6.0.12.215, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <HintPath>..\..\..\SharedBinaries\Telerik\Telerik.Reporting.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ReportBLL.cs" />
+    <Compile Include="DTO\BPFacilityChemicalDTO.cs" />
+    <Compile Include="DTO\BusinessOwnerOperatorDTO.cs" />
+    <Compile Include="DTO\BusinessActivitiesDTO.cs" />
+    <Compile Include="DTO\TieredPermittingFinancialAssuranceDTO.cs" />
+    <Compile Include="DTO\TieredPermittingFacilityDTO.cs" />
+    <Compile Include="Reports\BusinessActivitiesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BusinessActivitiesReport.Designer.cs">
+      <DependentUpon>BusinessActivitiesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BusinessOwnerOperatorReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BusinessOwnerOperatorReport.Designer.cs">
+      <DependentUpon>BusinessOwnerOperatorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CERSReportMaster.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CERSReportMaster.Designer.cs">
+      <DependentUpon>CERSReportMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CersReportDTO.cs" />
+    <Compile Include="Reports\HazMatInventoryMatrixReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HazMatInventoryMatrixReport.Designer.cs">
+      <DependentUpon>HazMatInventoryMatrixReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingFacilityReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingFacilityReport.Designer.cs">
+      <DependentUpon>TieredPermittingFacilityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingFinancialAssuranceReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingFinancialAssuranceReport.Designer.cs">
+      <DependentUpon>TieredPermittingFinancialAssuranceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingReport.Designer.cs">
+      <DependentUpon>TieredPermittingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TieredPermittingCADTO.cs" />
+    <Compile Include="DTO\TieredPermittingPBRDTO.cs" />
+    <Compile Include="DTO\TieredPermittingCELDTO.cs" />
+    <Compile Include="DTO\TieredPermittingCESWDTO.cs" />
+    <Compile Include="DTO\TieredPermittingCESQTDTO.cs" />
+    <Compile Include="DTO\TieredPermittingDTO.cs" />
+    <Compile Include="DTO\RemoteWasteConsolidationSiteAnnualDTO.cs" />
+    <Compile Include="DTO\USTMonitoringPlanDTO.cs" />
+    <Compile Include="DTO\HazMatInventoryDTO.cs" />
+    <Compile Include="DTO\USTTankInformationDTO.cs" />
+    <Compile Include="DTO\USTFacilityInformationDTO.cs" />
+    <Compile Include="Reports\HazMatInventoryReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HazMatInventoryReport.Designer.cs">
+      <DependentUpon>HazMatInventoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\RemoteWasteConsolidationSiteAnnualNotificationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RemoteWasteConsolidationSiteAnnualNotificationReport.Designer.cs">
+      <DependentUpon>RemoteWasteConsolidationSiteAnnualNotificationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\ReportActions.cs" />
+    <Compile Include="Reports\TieredPermittingCAReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCAReport.Designer.cs">
+      <DependentUpon>TieredPermittingCAReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCELReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCELReport.Designer.cs">
+      <DependentUpon>TieredPermittingCELReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCESQTReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCESQTReport.Designer.cs">
+      <DependentUpon>TieredPermittingCESQTReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCESWReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingCESWReport.Designer.cs">
+      <DependentUpon>TieredPermittingCESWReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingPBRReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TieredPermittingPBRReport.Designer.cs">
+      <DependentUpon>TieredPermittingPBRReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USTFacilityInformationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USTFacilityInformationReport.Designer.cs">
+      <DependentUpon>USTFacilityInformationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USTMonitoringPlanReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USTMonitoringPlanReport.Designer.cs">
+      <DependentUpon>USTMonitoringPlanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\USTTankInformationReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\USTTankInformationReport.Designer.cs">
+      <DependentUpon>USTTankInformationReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\Circles\Circle_Blue16.png" />
+    <Content Include="Images\Circles\Circle_Green16.png" />
+    <Content Include="Images\Circles\Circle_Grey16.png" />
+    <Content Include="Images\Circles\Circle_Orange16.png" />
+    <Content Include="Images\Circles\Circle_Red16.png" />
+    <Content Include="Images\primary-navigation-button-inactive-bg.png" />
+    <Content Include="Images\sub-navigation-content-bg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\BusinessActivitiesReport.resx">
+      <DependentUpon>BusinessActivitiesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BusinessOwnerOperatorReport.resx">
+      <DependentUpon>BusinessOwnerOperatorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CERSReportMaster.resx">
+      <DependentUpon>CERSReportMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HazMatInventoryMatrixReport.resx">
+      <DependentUpon>HazMatInventoryMatrixReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingFacilityReport.resx">
+      <DependentUpon>TieredPermittingFacilityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingFinancialAssuranceReport.resx">
+      <DependentUpon>TieredPermittingFinancialAssuranceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingReport.resx">
+      <DependentUpon>TieredPermittingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HazMatInventoryReport.resx">
+      <DependentUpon>HazMatInventoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RemoteWasteConsolidationSiteAnnualNotificationReport.resx">
+      <DependentUpon>RemoteWasteConsolidationSiteAnnualNotificationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingCAReport.resx">
+      <DependentUpon>TieredPermittingCAReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingCELReport.resx">
+      <DependentUpon>TieredPermittingCELReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingCESQTReport.resx">
+      <DependentUpon>TieredPermittingCESQTReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingCESWReport.resx">
+      <DependentUpon>TieredPermittingCESWReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TieredPermittingPBRReport.resx">
+      <DependentUpon>TieredPermittingPBRReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USTFacilityInformationReport.resx">
+      <DependentUpon>USTFacilityInformationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USTMonitoringPlanReport.resx">
+      <DependentUpon>USTMonitoringPlanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\USTTankInformationReport.resx">
+      <DependentUpon>USTTankInformationReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SharedSource\CERS.Web.Mvc\CERS.Web.Mvc.csproj">
+      <Project>{B24CAA57-4A08-4799-A2C1-81705785EC87}</Project>
+      <Name>CERS.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\CERS\CERS.csproj">
+      <Project>{3B135D0F-3E84-4A66-8B40-2DF6275CBDCD}</Project>
+      <Name>CERS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF.Core\UPF.Core.csproj">
+      <Project>{CDD94405-9FCC-4444-BCD8-CF763A18727C}</Project>
+      <Name>UPF.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF.Web.Mvc\UPF.Web.Mvc.csproj">
+      <Project>{3608AC35-9575-420B-AE22-F9F5F2560F03}</Project>
+      <Name>UPF.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SharedSource\UPF\UPF.csproj">
+      <Project>{0ED5C9D8-6EB6-4A61-AB5D-598956399F13}</Project>
+      <Name>UPF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
