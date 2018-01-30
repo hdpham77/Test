@@ -1,0 +1,56 @@
+﻿<src:WindowBase x:Class="CERS.EDT.Windows.Client.RAIQWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:src="clr-namespace:CERS.EDT.Windows.Client"
+		Title="Regulator Action Item Query (RAIQ)" Height="665" Width="770" WindowStartupLocation="CenterOwner" Loaded="WindowBase_Loaded">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<src:EndpointHeader Title="Regulator Action Item Query (RAIQ)" Acronym="RAIQ" Description="This endpoint allows regulators to query Action Items." />
+		<GroupBox Grid.Row="1" Header="Endpoint Parameters" Margin="5">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">CERSID:</Label>
+				<TextBox Grid.Row="0" Grid.Column="1" Name="tbCERSID" Margin="2" />
+				<Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">OrganizationCode:</Label>
+				<TextBox Grid.Row="0" Grid.Column="3" Name="tbOrganizationCode"></TextBox>
+
+				<Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">Requested On Start:</Label>
+				<DatePicker Grid.Row="1" Grid.Column="1" Name="dpRequestedOnStart" Margin="2" />
+				<Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right">Requested On End:</Label>
+				<DatePicker Grid.Row="1" Grid.Column="3" Name="dpRequestedOnEnd" Margin="2" />
+
+				<CheckBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Center" Name="cbCompleted">Completed</CheckBox>
+				<Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Type:</Label>
+				<ComboBox Name="cboType" Grid.Row="2" Grid.Column="4"  VerticalAlignment="Center" DisplayMemberPath="Text"></ComboBox>
+			</Grid>
+		</GroupBox>
+		<src:OutputPanel Grid.Row="2" x:Name="op" />
+		<Grid Grid.Row="3" Margin="0,5,0,10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="75" />
+				<ColumnDefinition Width="75" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="1" Name="btnInvoke" Margin="2" Click="btnInvoke_Click">Invoke</Button>
+			<Button Grid.Column="2" Name="btnClose" Margin="2" Click="btnClose_Click">Close</Button>
+		</Grid>
+		<src:StatusBarPanel Grid.Row="4" Margin="0,2,0,0"></src:StatusBarPanel>
+	</Grid>
+</src:WindowBase>

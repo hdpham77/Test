@@ -1,0 +1,56 @@
+﻿<src:WindowBase x:Class="CERS.EDT.Windows.Client.RFTQWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:src="clr-namespace:CERS.EDT.Windows.Client"
+		Title="Regulator Facility Transfer Query (RFTQ)" Height="665" Width="770" WindowStartupLocation="CenterOwner" Loaded="WindowBase_Loaded">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<src:EndpointHeader Acronym="RFTQ" Title="Regulator Facility Transfer Query (RFTQ)" Description="This endpoint allows regulators to query Facility Transfers." />
+		<GroupBox Grid.Row="1" Header="Endpoint Parameters" Margin="5">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right">CERSID:</Label>
+				<TextBox Grid.Row="0" Grid.Column="1" Name="tbCERSID" Margin="2" />
+				<Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">Organization Code:</Label>
+				<TextBox Grid.Row="0" Grid.Column="3" Name="tbOrganizationCode" Margin="2" />
+				<Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right">Occurred On Start:</Label>
+				<DatePicker Grid.Row="1" Grid.Column="1" Name="dpOccurredOnStart" Margin="2" />
+				<Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right">Submitted On End:</Label>
+				<DatePicker Grid.Row="1" Grid.Column="3" Name="dpOccurredOnEnd" Margin="2" />
+				<Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right">Assumed Ownership On Start:</Label>
+				<DatePicker Grid.Row="2" Grid.Column="1" Name="dpAssumedOwnershipOnStart" Margin="2" />
+				<Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right">Assumed Ownership On End:</Label>
+				<DatePicker Grid.Row="2" Grid.Column="3" Name="dpAssumedOwnershipOnEnd" Margin="2" />
+			</Grid>
+		</GroupBox>
+		<src:OutputPanel Grid.Row="2" x:Name="op" />
+		<Grid Grid.Row="3" Margin="0,5,0,10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="75" />
+
+				<ColumnDefinition Width="75" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="1" Name="btnInvoke" Margin="2" Click="btnInvoke_Click">Invoke</Button>
+			<Button Grid.Column="2" Name="btnClose" Margin="2" Click="btnClose_Click">Close</Button>
+		</Grid>
+		<src:StatusBarPanel Grid.Row="4" Margin="0,2,0,0"></src:StatusBarPanel>
+	</Grid>
+</src:WindowBase>

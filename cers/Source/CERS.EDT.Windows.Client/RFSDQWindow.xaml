@@ -1,0 +1,42 @@
+﻿<src:WindowBase x:Class="CERS.EDT.Windows.Client.RFSDQWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:src="clr-namespace:CERS.EDT.Windows.Client"
+        Title="Regulator Facility Submittal Document Query (RFSDQ) " Height="553" Width="770" WindowStartupLocation="CenterOwner">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<src:EndpointHeader Grid.Row="0" Acronym="RFSDQ" Title="Regulator Facility Submittal Document Query (RFSDQ)" Description="Allows regulators to download documents associated with Facility Submittal's." />
+		<GroupBox Grid.Row="1" Header="Endpoint Parameters">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Content="Document CERSUniqueKey:"></Label>
+				<TextBox Grid.Row="0" Grid.Column="1" Margin="2" Grid.ColumnSpan="3" Name="tbIdentifier"></TextBox>
+			</Grid>
+		</GroupBox>
+		<src:OutputPanel Grid.Row="2" x:Name="op" />
+		<Grid Grid.Row="3" Margin="0,5,0,10">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition Width="75" />
+				<ColumnDefinition Width="75" />
+			</Grid.ColumnDefinitions>
+			<Button Grid.Column="1" Name="btnInvoke" Margin="2" Click="btnInvoke_Click">Invoke</Button>
+			<Button Grid.Column="2" Name="btnClose" Margin="2" Click="btnClose_Click">Close</Button>
+		</Grid>
+		<src:StatusBarPanel Grid.Row="4" Margin="0,2,0,0"></src:StatusBarPanel>
+	</Grid>
+</src:WindowBase>
