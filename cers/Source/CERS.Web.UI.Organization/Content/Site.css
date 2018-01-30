@@ -1,0 +1,288 @@
+﻿/* MISC
+----------------------------------------------------------*/
+
+td > em, td > strong, td > b {
+	vertical-align: top;
+}
+
+.dashboard-table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 10px 5px 3px 5px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+	border: 2px solid #99cc66;
+	width: 99%;
+}
+
+	.dashboard-table tbody tr:first-child {
+		text-align: left;
+	}
+
+	.dashboard-table th {
+		padding: 6px 10px 4px 10px;
+		font-weight: normal;
+		font-size: 12px;
+		color: #424242;
+		border-bottom: 1px dashed #99cc66;
+		white-space: nowrap;
+		background: #dafdd0;
+	}
+
+	.dashboard-table td {
+		padding: 7px 17px 7px 17px;
+		color: #1A721E;
+		white-space: nowrap;
+	}
+
+	.dashboard-table tbody tr:hover td {
+		color: #329933;
+		background: #ecfde7;
+	}
+
+.commontasks a:link {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+}
+
+.error {
+	color: Red;
+}
+
+.smallerror {
+	color: Red;
+	font-size: .8em;
+}
+
+div#title {
+	display: block;
+	text-align: left;
+}
+
+#logindisplay {
+	font-size: 1.1em;
+	display: block;
+	text-align: right;
+	margin: 10px;
+	color: White;
+}
+
+	#logindisplay a:link {
+		color: white;
+		text-decoration: underline;
+	}
+
+	#logindisplay a:visited {
+		color: white;
+		text-decoration: underline;
+	}
+
+	#logindisplay a:hover {
+		color: white;
+		text-decoration: none;
+	}
+
+.smallLinkSize {
+	font-size: .85em;
+}
+
+.smallIconSize {
+	width: 13px;
+	height: 13px;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+	color: #ff0000;
+}
+
+.field-validation-valid {
+	display: none;
+}
+
+.input-validation-error {
+	border: 1px solid #ff0000 !important;
+	background-color: #ffeeee;
+	padding: 1px 0 1px;
+}
+
+.validation-summary-errors {
+	font-weight: bold;
+	color: #ff0000;
+}
+
+.validation-summary-valid {
+	display: none;
+}
+
+/* Styles for editor and display helpers
+----------------------------------------------------------*/
+.display-label, .editor-label {
+	margin: 1em 0 0 0;
+}
+
+.display-field, .editor-field {
+	margin: 0.5em 0 0 0;
+}
+
+.text-box {
+	/*width: 30em;*/
+}
+
+	.text-box.multi-line {
+		height: 6.5em;
+	}
+
+.tri-state {
+	width: 6em;
+}
+
+/* MENU
+----------------------------------------------------------*/
+#menu {
+	position: relative;
+	margin: 0;
+	text-align: right;
+}
+
+	#menu .t-item {
+		border-width: 0 0 0 1px;
+	}
+
+	#menu .t-link {
+		padding: 5px 20px;
+		font-weight: bold;
+		text-decoration: none;
+		line-height: 1.8em;
+		color: #FFF;
+	}
+
+		#menu .t-link:hover {
+			padding: 5px 20px;
+			font-weight: bold;
+			text-decoration: none;
+			line-height: 1.8em;
+			color: #000;
+		}
+
+#footer {
+	color: #999;
+	padding: 10px 0;
+	text-align: center;
+	line-height: normal;
+	margin: 0;
+	font-size: .9em;
+}
+
+/* LEFT NAV MENU
+----------------------------------------------------------*/
+.left-nav-menu {
+	list-style-type: none;
+}
+
+	.left-nav-menu li {
+		line-height: 24px;
+	}
+
+	.left-nav-menu a {
+		font-weight: bold;
+		color: #696969;
+	}
+
+		.left-nav-menu a:hover {
+			color: #1A721E;
+		}
+
+		.left-nav-menu a.selected {
+			color: #1A721E;
+			text-decoration: underline;
+		}
+
+/*Facility Submittal Element Portlet*/
+.submittalStatusSubmitted {
+	color: #00FF00;
+	font-weight: bold;
+}
+
+.submittalStatusDraft {
+	color: #ffff00;
+}
+
+.submittalStatusNotAccepted {
+	color: #D00000;
+	font-weight: bold;
+}
+
+.submittalStatus {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/*Submittal Event History Grid */
+.submittalHistoryGrid-Submital {
+	font-size: .95em;
+	line-height: 1.2em;
+}
+
+.smallSubmitButton {
+	height: 18px;
+	font: normal 10px "Tahoma", Verdana, Arial, Helvetica, sans-serif;
+}
+/* Environment Indicator
+-------------------------------------------------------------------*/
+.environment-indicator {
+	height: 30px;
+	position: fixed;
+	top: 0;
+	left: 43%;
+	background-color: #ffef00;
+	width: 200px;
+	font-size: .8em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 5px 5px 5px;
+	z-index: 10000;
+}
+
+/* system-maintenance-alert-window
+-------------------------------------------------------------------*/
+.system-maintenance-alert-window {
+	height: 35px;
+	width: 250px;
+	left: 43%;
+	top: 0px;
+	position: fixed;
+	background-color: #fbfb88;
+	text-align: center;
+	/*border-top: 1px solid #000;*/
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	font-size: .8em;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0 5px 10px 5px;
+	z-index: 10000;
+}
+
+#SystemMaintenanceAlertWindowCounter {
+}
+
+.hidden {
+	display: none;
+}
+
+.print-help-button {
+	cursor: pointer;
+}
+
+/* Add Facility Wizard 2.0 */
+.hiddenpanel {
+	display: none;
+}

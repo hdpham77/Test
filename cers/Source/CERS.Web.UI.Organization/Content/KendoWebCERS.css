@@ -1,0 +1,27 @@
+/* ORGANIZATION PORTAL: Kendo Grid Selected Page color:   #1a721e and rgb(26,114,30) for Org Portal;  #0D6AB0 for Reg Portal  */
+
+.k-state-selected {
+	border-top-color: #1a721e;
+	border-right-color: #1a721e;
+	border-bottom-color: #1a721e;
+	border-left-color: #1a721e;
+	background-color: rgb(26, 114, 30);
+}
+
+.k-state-selected, .k-button:active, .k-draghandle.k-state-selected:hover {
+	background-image: none, linear-gradient(to bottom, #1a721e 0px, #1a721e 100%);
+}
+
+.k-grid td {
+	line-height: 1.0em;
+	vertical-align: top;
+}
+
+.empty-kendo-grid
+{
+    color: #888;
+    background: #eee;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+}

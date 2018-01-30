@@ -1,0 +1,66 @@
+﻿#UPF_UIMessages
+{
+	padding: 5px;
+}
+
+.UPF_ErrorMessage
+{
+	/*font-weight: bold;*/
+	color: #c03;
+}
+.UPF_ActionMessage
+{
+	/*font-weight: bold;*/
+	color: #a018e7;
+}
+.UPF_SuccessMessage
+{
+	color: #396; /*	font-weight: bold;*/
+}
+.UPF_InfoMessage
+{
+	/*font-weight: bold;*/
+	color: #000;
+}
+
+.UPF_WarningMessage
+{
+	color: #D75D00;
+}
+
+.tooltip
+{
+    z-index: 11111;
+	display: none;
+	background: transparent url(Images/black_arrow_big.png);
+	height: 163px;
+	padding: 40px 30px 10px 30px;
+	width: 310px;
+	font-size: .7em;
+	color: #fff;
+}
+
+.tooltip.bottom
+{
+	background: url(Images/black_arrow_big_bottom.png);
+	padding-top: 50px;
+	height: 163px;
+}
+
+.systooltip
+{
+	display: none;
+	background: transparent url(Images/black_arrow.png);
+	font-size: .8em;
+	height: 70px;
+	width: 160px;
+	padding: 25px;
+	color: #fff;
+}
+
+.systooltip.bottom
+{
+	background: url(Images/black_arrow_bottom.png);
+	padding-top: 40px;
+	height: 55px;
+}

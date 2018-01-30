@@ -1,0 +1,320 @@
+﻿.RightAlign, .RightAlignCell
+{
+    text-align: right;
+    padding-right: 1px;
+}
+.CenterAlign, .CenterAlignCell
+{
+    text-align: center;
+}
+.LeftFieldLabel
+{
+    font-weight: bold;
+}
+.RightFieldLabel
+{
+}
+.AboveFieldLabel
+{
+    font-weight: bold;
+}
+/* For above big text boxes. */
+
+.RightAlign .LeftFieldLabel, .RightAlignCell .LeftFieldLabel
+{
+    display: inline;
+    float: right;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.FieldHelp + .LeftFieldLabel
+{
+    display: inline;
+    float: none;
+    white-space: nowrap;
+}
+
+.LeftFieldLabel + .FieldHelp
+{
+    display: inline;
+    float: right;
+    margin-right: 0.25em;
+    white-space: nowrap;
+}
+
+.RequiredMark + .LeftFieldLabel
+{
+    display: inline;
+    float: none;
+    white-space: nowrap;
+}
+
+span.FormLabel, div.FormLabel
+{
+    font-family: Helvetica,Sans-Serif;
+    padding: 3px 0 0 0;
+    display: block;
+    width: auto;
+    color: #4f4f4f;
+}
+
+span.FormLabel label, div.FormLabel label
+{
+    font-weight: bold;
+    font-size: .85em;
+    display: inline;
+    margin-right: 0.25em; /* white-space: nowrap; */
+}
+
+span.FormLabel label.FieldNumberLabel, div.FormLabel label.FieldNumberLabel
+{
+    font-family: Helvetica,Sans-Serif;
+    display: inline;
+    color: Gray;
+    font-size: .7em;
+    font-weight: normal;
+}
+
+span.FormDisplay
+{
+    word-break: break-all;
+    font-size: .9em;
+    color: Black;
+    padding: 1px 5px 0 4px;
+}
+
+span.PlainDisplay
+{
+    word-break: break-all;
+    font-size: .9em;
+    color: Black;
+    padding: 1px 0 0 0;
+}
+
+span.StandaloneButton
+{
+    display: inline;
+    float: left;
+    padding-right: 3px;
+    margin-top: 5px;
+}
+
+span.InlineBlock
+{
+    display: inline;
+    float: left;
+    padding-right: 3px;
+}
+
+span.InlineBlock span.Input
+{
+    padding-left: 3px;
+}
+
+span.RadioLabel
+{
+    font-family: Helvetica,Sans-Serif;
+    display: inline;
+    color: Black;
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+span.CheckBoxList
+{
+    font-family: Helvetica,Sans-Serif;
+    display: inline;
+    color: Black;
+    font-weight: normal;
+}
+
+span.CheckBoxList .Input
+{
+    margin-left: 5px;
+}
+
+span.Block
+{
+    display: block;
+}
+
+span.NoWrap
+{
+    white-space: nowrap;
+}
+
+span.NoWrap label
+{
+    white-space: nowrap;
+}
+
+ul.WhatsNext
+{
+    margin-left: 1.5em;
+}
+
+ul.WhatsNext li:first-child
+{
+    margin-top: 1em;
+}
+
+ul.WhatsNext li
+{
+    margin-bottom: 1em;
+}
+
+fieldset
+{
+    background: #f7f7f7;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #468900;
+    margin-bottom: 10px;
+    -border-radius: 3px 3px 3px 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+fieldset > div
+{
+    width: 99%;
+    position: relative;
+    margin: 6px 6px 6px 4px;
+}
+
+fieldset.Inline
+{
+    display: inline;
+}
+
+fieldset.Block
+{
+    display: block;
+}
+
+fieldset div.Divider
+{
+    border-right: 1px solid #468900;
+}
+
+legend
+{
+    font-family: Helvetica,Sans-Serif;
+    font-weight: bold;
+    color: #468900;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.CreatedUpdatedDisplay
+{
+    font-family: Helvetica,Sans-Serif;
+    font-size: .75em;
+}
+
+.RecordMetaData
+{
+    font-size: .9em;
+    margin: .75em 0px;
+}
+.RecordMetaDataLabel
+{
+    font-weight: bold;
+}
+.CreatedUpdatedLabel
+{
+    font-weight: bold;
+    font-size: .9em;
+    margin: 2em 0px .75em 0px;
+}
+
+span.NoWrap
+{
+    white-space: nowrap;
+}
+
+/*This can go once the control is fixed*/
+EmailTextBox
+{
+    width: 300px;
+    border: 1px solid #CCC;
+}
+
+input.cers-radio-button
+{
+    padding: 0 3px 0 0;
+}
+
+.Comments
+{
+    font-size: smaller;
+    color: #4f4f4f;
+}
+
+.form-instructions
+{
+    font-size: .9em;
+    line-height: 16px;
+}
+
+.copy-address
+{
+    float: right;
+    text-decoration: underline;
+    font-size: .8em;
+    margin: 0 5px 0 0;
+    line-height: 0px;
+}
+
+.toggle-address
+{
+    text-decoration: underline;
+    font-size: .8em;
+    margin: 0 5px 0 0;
+    line-height: 0px;
+    display: inline;
+}
+
+.small-link
+{
+    text-decoration: underline;
+    font-size: .8em;
+    margin: 8px 5px 3px 5px;
+    display: inline;
+}
+
+.small-disabled-link
+{
+    text-decoration: underline;
+    font-size: .8em;
+    margin: 8px 5px 3px 5px;
+    display: inline;
+    color: Gray;
+}
+
+.submittal-enabled
+{
+    opacity: 0.3;
+    z-index: 90;
+    background-color: black;
+}
+
+.radio-wrapper
+{
+    padding: 2px 2px 0 2px;
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+
+table.form-display-table td
+{
+    padding: 3px;
+}
+
+table.top-align td
+{
+    vertical-align: top;
+}
