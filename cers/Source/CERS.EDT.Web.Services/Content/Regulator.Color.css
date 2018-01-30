@@ -1,0 +1,1109 @@
+﻿/*Regulator Color Codes
+
+Medium Blue: #0D6AB0
+Light Blue: #87b5d8
+Near White Blue: #eef6fb
+Muddy Blue: #859caa
+
+--------------------------*/
+
+/* Global.css colors/images */
+
+body
+{
+    background: #FFF url(../images/body-bg.jpg);
+}
+
+input[type=text], input[type=password]
+{
+    border-color: #a2a2a2;
+}
+
+textarea
+{
+    border-color: #a2a2a2;
+}
+
+a
+{
+    color: #0D6AB0;
+}
+
+a.link-black
+{
+    color: #000000;
+}
+
+.status-bar
+{
+    color: #666;
+}
+
+.status-bar .right ul li
+{
+    border-left-color: #999;
+}
+
+.status-bar .right ul li a
+{
+    color: #666;
+}
+
+.primary-navigation .left-cap
+{
+    background: url(../images/primary-navigation-left-cap-bg.gif) no-repeat;
+}
+
+.primary-navigation .right-cap
+{
+    background: url(../images/primary-navigation-right-cap-bg.gif) no-repeat;
+}
+
+.primary-navigation .content
+{
+    background: url(../images/primary-navigation-content-bg.gif) repeat-x;
+}
+
+.primary-navigation .content ol.right li a
+{
+    background: url(../images/primary-navigation-button-inactive-bg.png) no-repeat;
+    color: #FFF;
+}
+
+.primary-navigation .content ol.right li.active a
+{
+    background: url(../images/primary-navigation-button-active-bg.png) no-repeat;
+}
+
+.primary-navigation .content ol.right li:hover a.nest
+{
+    background: url(../images/primary-navigation-button-active-nest-bg.gif) no-repeat;
+}
+
+.primary-navigation .content ol.right li div.nested div.nested-wrapper
+{
+    background: #333;
+    border-bottom-color: #333;
+}
+
+.primary-navigation .content ol.right li div.nested ol li
+{
+    background: url(../images/primary-navigation-button-active-nest-bullet-bg.gif) 0 6px no-repeat;
+}
+
+.primary-navigation .content ol.right li div.nested ol li a
+{
+    color: #E5E5E5;
+}
+
+.primary-navigation .content ol.right li div.nested ol li a:hover
+{
+    color: #FFF;
+}
+
+.block .head ul.block-tab-menu li a
+{
+    color: #FFF;
+}
+
+.block-grey .head ul.block-tab-menu li
+{
+    background: url(../images/tab-grey-left-bg.png) left no-repeat;
+}
+
+.block-grey .head ul.block-tab-menu li a
+{
+    background: url(../images/tab-grey-right-bg.png) right no-repeat;
+}
+
+.block-colour .head ul.block-tab-menu li
+{
+    background: url(../images/tab-colour-left-bg.png) left no-repeat;
+}
+
+.block-colour .head ul.block-tab-menu li a
+{
+    background: url(../images/tab-colour-right-bg.png) right no-repeat;
+}
+
+.block .head ul.block-tab-menu li.active, .block .head ul.block-tab-menu li:hover
+{
+    background: url(../images/tab-active-left-bg.png) left no-repeat;
+}
+
+.block .head ul.block-tab-menu li.active a, .block .head ul.block-tab-menu li:hover a
+{
+    background: url(../images/tab-active-right-bg.png) right no-repeat;
+    color: #333;
+}
+
+.block .block-content
+{
+    background: #FFF;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+}
+
+.block .block-footer-cap .cap-left
+{
+    background: url(../images/block-footer-cap-left-bg.gif) no-repeat;
+}
+
+.block .block-footer-cap .cap-right
+{
+    background: url(../images/block-footer-cap-right-bg.gif) no-repeat;
+}
+
+.block .block-footer-cap .content
+{
+    background: url(../images/block-footer-cap-bg.gif) repeat-x;
+}
+
+.block-grey .head .cap-left
+{
+    background: url(../images/block-head-cap-left-grey-bg.gif) no-repeat;
+}
+
+.block-grey .head .cap-right
+{
+    background: url(../images/block-head-cap-right-grey-bg.gif) no-repeat;
+}
+
+.block-grey .head .content
+{
+    background: url(../images/block-head-cap-content-grey-bg.gif) repeat-x;
+}
+
+.block-colour .head .cap-left
+{
+    background: url(../images/block-head-cap-left-colour-bg.gif) no-repeat;
+}
+
+.block-colour .head .cap-right
+{
+    background: url(../images/block-head-cap-right-colour-bg.gif) no-repeat;
+}
+
+.block-colour .head .content
+{
+    background: url(../images/block-head-cap-content-colour-bg.gif) repeat-x;
+}
+
+.block .head .content h2, .block .head .content h2 a
+{
+    color: #FFF !important;
+}
+
+a.button
+{
+    color: #FFF;
+}
+
+a.button-grey
+{
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+a.button-grey:hover
+{
+    background: url(../images/button-colour-bg.png) no-repeat;
+}
+
+a.button-colour
+{
+    background: url(../images/button-colour-bg.png) no-repeat;
+}
+
+a.button-colour:hover
+{
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+.standard-content h3
+{
+    color: #87b5d8;
+    border-bottom-color: #87b5d8;
+}
+
+.standard-content h4
+{
+    color: #87b5d8;
+}
+
+.standard-table
+{
+    border-top-color: #FFF;
+    border-bottom-color: #E5E5E5;
+}
+
+.standard-table-mini
+{
+    border-top-color: #FFF;
+}
+
+.standard-table thead tr th
+{
+    background: url(../images/table-thead-bg.jpg) repeat-x;
+    color: #333;
+    border-right-color: #D5D5D5;
+    border-left-color: #FFF;
+    border-bottom-color: #BBB;
+}
+
+.standard-table tbody tr td
+{
+    color: #525252;
+    background: #FFF;
+}
+
+.standard-table-mini tbody tr.even td, .standard-table tbody tr.even td
+{
+    background: #eef6fb;
+}
+
+.standard-table tbody tr td.block-cell
+{
+    color: #FFF;
+}
+
+.standard-table tbody tr td.block-cell a
+{
+    color: #FFF;
+}
+
+.standard-table tbody tr td.block-cell-grey
+{
+    background: url(../images/cell-block-grey-bg.png) center 50% no-repeat;
+}
+
+.standard-table tbody tr td.block-cell-colour
+{
+    background: url(../images/cell-block-colour-bg.png) center 50% no-repeat;
+}
+
+.standard-table tbody tr.even td.block-cell, .standard-table-mini tbody tr.even td.block-cell
+{
+    background-color: #eef6fb;
+}
+
+.standard-table-mini tbody tr td p
+{
+    color: #666;
+}
+
+.action-set-pagination .left
+{
+    background: url(../images/action-up-arrow.png) 16px 4px no-repeat;
+}
+
+.action-set-pagination ul.pagination li
+{
+    border-left-color: #CCC;
+}
+
+button
+{
+    color: #FFF;
+}
+
+button.form-button-colour
+{
+    background: url(../images/button-colour-bg.png) no-repeat;
+}
+
+button.form-button-grey
+{
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+button.form-button-colour:hover
+{
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+button.form-button-grey:hover
+{
+    background: url(../images/button-colour-bg.png) no-repeat;
+}
+
+form.standard-form fieldset
+{
+    border-color: #CCC;
+}
+
+form.standard-form fieldset legend
+{
+    color: #87b5d8;
+}
+
+form.standard-form .field-error label
+{
+    color: #F00;
+}
+
+form.standard-form .field .field-help
+{
+    color: #999;
+}
+
+form.standard-form .field-error .field-help
+{
+    color: #F00;
+}
+
+form.standard-form .field .textbox, form.standard-form .field .textarea
+{
+    background: url(../images/field-bg.gif) no-repeat;
+    border-color: #CCC;
+    color: #333;
+}
+
+form.standard-form .field-error .textbox, form.standard-form .field-error .textarea
+{
+    background: url(../images/field-red-bg.gif) no-repeat;
+    border-color: #F00;
+}
+
+.gallery-list ol li a.thumbnail img
+{
+    border-color: #CCC;
+}
+
+div.column-right > .flash-success
+{
+    background: url(../images/flash-success-right-column-bg.gif) no-repeat;
+    color: #50874B;
+}
+
+div.column-right > .flash-notice
+{
+    background: url(../images/flash-notice-right-column-bg.gif) no-repeat;
+    color: #333;
+}
+
+div.column-right > .flash-failure
+{
+    background: url(../images/flash-failure-right-column-right-bg.gif) no-repeat;
+    color: #E63D2F;
+}
+
+.flash-success
+{
+    background: url(../images/flash-success-bg.gif) no-repeat;
+    color: #50874B;
+}
+
+.flash-success a
+{
+    color: #50874B;
+}
+
+.flash-notice
+{
+    background: url(../images/flash-notice-bg.gif) no-repeat;
+    color: #333;
+}
+
+.flash-notice a
+{
+    color: #F00;
+}
+
+.flash-failure
+{
+    background: url(../images/flash-failure-bg.gif) no-repeat;
+    color: #E63D2F;
+}
+
+.flash-failure a
+{
+    color: #E63D2F;
+}
+
+.search-form fieldset input
+{
+    background: url(../images/search-form-field-bg.png) no-repeat;
+    color: #666;
+}
+
+.calendar-controls
+{
+    background: url(../images/table-thead-bg.jpg) repeat-x;
+    border-bottom-color: #CCC;
+}
+
+.calendar-controls .selector span
+{
+    color: #333;
+}
+
+.calendar-table thead tr th
+{
+    background: url(../images/table-thead-bg.jpg) 0 top repeat-x;
+    color: #333;
+    border-right-color: #D5D5D5;
+    border-left-color: #FFF;
+    border-bottom-color: #CCC;
+}
+
+.calendar-table tbody tr td
+{
+    border-right-color: #DDD;
+    border-bottom-color: #DDD;
+}
+
+.calendar-table tbody tr td a, .calendar-table tbody tr td.inactive span
+{
+    color: #333;
+}
+
+.calendar-table tbody tr td.inactive span
+{
+    background: #EEE;
+    color: #999;
+}
+
+.calendar-table tbody tr td.current a, .calendar-table tbody tr td.current
+{
+    color: #87b5d8;
+    background: #eef6fb;
+}
+
+.calendar-table tbody tr td.event a
+{
+    border-color: #FFF;
+}
+
+.calendar-table tbody tr td.event-grey a
+{
+    background-image: url(../images/calendar-event-grey-bg.gif);
+}
+
+.calendar-table tbody tr td.event-colour a
+{
+    background-image: url(../images/calendar-event-colour-bg.gif);
+}
+
+.accordion li.panel
+{
+    border-bottom-color: #CCC;
+}
+
+.accordion li.panel h3.head
+{
+    background: url(../images/table-thead-bg.jpg) 0 top repeat-x;
+    border-top-color: #FFF;
+}
+
+.accordion li.panel h3.head a
+{
+    color: #333;
+    background: url(../images/accordion-right-arrow-bg.png) 440px 50% no-repeat;
+}
+
+.accordion li.panel h3.selected a
+{
+    background: url(../images/accordion-down-arrow-bg.png) 438px 50% no-repeat;
+}
+
+.accordion li.panel p.content
+{
+    color: #333;
+    border-top-color: #CCC;
+}
+
+.footer
+{
+}
+
+.footer p
+{
+    color: #666;
+}
+/* End Global.css colors/images */
+
+/* End Custom.css colors/images */
+
+/* Organization Custom.css */
+
+.primary-navigation .content ol.right li span.disabled
+{
+    background: url(../images/primary-navigation-button-disabled-bg.png) no-repeat;
+    color: #868686;
+}
+
+.search-table
+{
+    border-color: #E5E5E5;
+    background: #f7f7f7;
+}
+
+.search-table thead tr th
+{
+    background: url(../images/table-thead-bg.jpg) repeat-x;
+    color: #333;
+    border-right-color: #D5D5D5;
+    border-left-color: #FFF;
+    border-bottom-color: #BBB;
+}
+
+.search-table tbody tr td
+{
+    color: #525252;
+    background: #f7f7f7;
+}
+
+.search-table tbody tr.even td
+{
+    background: #eef6fb;
+}
+
+.search-table tbody tr td.block-cell
+{
+    color: #FFF;
+}
+
+.search-table tbody tr td.block-cell a
+{
+    color: #FFF;
+}
+
+.search-table tbody tr td.block-cell-grey
+{
+    background: url(../images/cell-block-grey-bg.png) center 50% no-repeat;
+}
+
+.search-table tbody tr td.block-cell-colour
+{
+    background: url(../images/cell-block-colour-bg.png) center 50% no-repeat;
+}
+
+.search-table tbody tr.even td.block-cell
+{
+    background-color: #eef6fb;
+}
+
+/*FORM TABLE*/
+.form-table
+{
+    border-color: #E5E5E5;
+}
+
+.form-table thead tr th
+{
+    background: url(../images/table-thead-bg.jpg) repeat-x;
+    color: #333;
+    border-right-color: #D5D5D5;
+    border-left-color: #FFF;
+    border-bottom-color: #BBB;
+}
+
+.form-table tbody tr td
+{
+    color: #525252;
+    background: #FFF;
+}
+
+.form-table tbody tr.even td
+{
+    background: #eef6fb;
+}
+
+.form-table tbody tr td.block-cell
+{
+    text-align: center;
+    color: #FFF;
+}
+
+.form-table tbody tr td.block-cell a
+{
+    color: #FFF;
+}
+
+.form-table tbody tr td.block-cell-grey
+{
+    background: url(../images/cell-block-grey-bg.png) center 50% no-repeat;
+}
+
+.form-table tbody tr td.block-cell-colour
+{
+    background: url(../images/cell-block-colour-bg.png) center 50% no-repeat;
+}
+
+.form-table tbody tr.even td.block-cell
+{
+    background-color: #eef6fb;
+}
+
+.primary-navigation .content ol.right li a.home
+{
+    background: url(../images/primary-navigation-home-button-inactive-bg.png) no-repeat;
+    color: #FFF;
+}
+
+.primary-navigation .content ol.right li.active a.home
+{
+    background: url(../images/primary-navigation-home-button-active-bg.png) no-repeat;
+}
+
+.primary-navigation .content ol.right li div.nested
+{
+    background: url(../images/primary-navigation-button-active-nest-captop-bg.png) no-repeat;
+}
+
+.primary-navigation .content ol.right li div.nested div.cap-bottom
+{
+    background: url(../images/primary-navigation-button-active-nest-capbottom-bg.png) bottom no-repeat;
+}
+
+.primary-navigation .content .left h1
+{
+    background: url(../images/logo.png) no-repeat;
+}
+
+.sub-navigation .left-cap
+{
+    background: url(../images/sub-navigation-left-cap-bg.gif) no-repeat;
+}
+
+.sub-navigation .right-cap
+{
+    background: url(../images/sub-navigation-right-cap-bg.gif) no-repeat;
+}
+
+.sub-navigation .content
+{
+    background: url(../images/sub-navigation-content-bg.gif) repeat-x;
+}
+
+.sub-navigation .content .left h1
+{
+    color: #FFF;
+}
+
+.sub-navigation .content .left h1 .colored
+{
+    color: #859caa;
+}
+
+.sub-navigation .content .left .breadcrumb
+{
+    color: #FFF;
+}
+
+.sub-navigation .content .left .breadcrumb a
+{
+    color: #FFF;
+}
+
+.sub-navigation .content .left .separator
+{
+    color: #FFF;
+}
+
+.sub-navigation .content ol.right li a
+{
+    background: url(../images/primary-navigation-button-inactive-bg.png) no-repeat;
+    color: #FFF;
+}
+
+.sub-navigation .content ol.right li.active a
+{
+    background: url(../images/primary-navigation-button-active-bg.png) no-repeat;
+}
+
+.sub-navigation .content ol.right li:hover a.nest
+{
+    background: url(../images/primary-navigation-button-active-nest-bg.gif) no-repeat;
+}
+
+.sub-navigation .content ol.right li div.nested
+{
+    background: url(../images/primary-navigation-button-active-nest-captop-bg.png) no-repeat;
+}
+
+.sub-navigation .content ol.right li div.nested div.nested-wrapper
+{
+    background: #333;
+    border-bottom-color: #333;
+}
+
+.sub-navigation .content ol.right li div.nested div.cap-bottom
+{
+    background: url(../images/primary-navigation-button-active-nest-capbottom-bg.png) bottom no-repeat;
+}
+
+.sub-navigation .content ol.right li div.nested ol li
+{
+    background: url(../images/primary-navigation-button-active-nest-bullet-bg.gif) 0 11px no-repeat;
+}
+
+.sub-navigation .content ol.right li div.nested ol li a
+{
+    color: #E5E5E5;
+}
+
+.sub-navigation .content ol.right li div.nested ol li a:hover
+{
+    color: #FFF;
+}
+
+input.form-button-grey
+{
+    color: #FFF;
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+input.form-button-grey:hover
+{
+    background: url(../images/button-grey-hover-bg.png) no-repeat;
+}
+
+input.form-button-colour
+{
+    color: #FFF;
+    background: url(../images/button-colour-bg.png) no-repeat;
+}
+
+input.form-button-colour:hover
+{
+    background: url(../images/button-colour-hover-bg.png) no-repeat;
+}
+
+a.form-button-grey
+{
+    color: #FFF;
+    background: url(../images/button-grey-bg.png) no-repeat;
+}
+
+a.form-button-grey:hover
+{
+    background: url(../images/button-grey-hover-bg.png) no-repeat;
+}
+
+.plain-block .block-content
+{
+    background: #FFF;
+    border-left-color: #CCC;
+    border-right-color: #CCC;
+}
+
+.plain-block .block-footer-cap .cap-left
+{
+    background: url(../images/block-footer-cap-left-bg.gif) no-repeat;
+}
+
+.plain-block .block-footer-cap .cap-right
+{
+    background: url(../images/block-footer-cap-right-bg.gif) no-repeat;
+}
+
+.plain-block .block-footer-cap .content
+{
+    background: url(../images/block-footer-cap-bg.gif) repeat-x;
+}
+
+.block-head-cap .head .cap-left
+{
+    background: url(../images/block-head-cap-left-bg.gif) no-repeat;
+}
+
+.block-head-cap .head .cap-right
+{
+    background: url(../images/block-head-cap-right-bg.gif) no-repeat;
+}
+
+.block-head-cap .head .content
+{
+    background: url(../images/block-head-cap-bg.gif) repeat-x;
+}
+
+.block-colour .small-head .cap-left
+{
+    background: url(../images/block-head-small-cap-left-colour-bg.gif) no-repeat;
+}
+
+.block-colour .small-head .cap-right
+{
+    background: url(../images/block-head-small-cap-right-colour-bg.gif) no-repeat;
+}
+
+.block-colour .small-head .content
+{
+    background: url(../images/block-head-small-cap-content-colour-bg.gif) repeat-x;
+}
+
+.block-grey .small-head .cap-left
+{
+    background: url(../images/block-head-small-cap-left-grey-bg.gif) no-repeat;
+}
+
+.block-grey .small-head .cap-right
+{
+    background: url(../images/block-head-small-cap-right-grey-bg.gif) no-repeat;
+}
+
+.block-grey .small-head .content
+{
+    background: url(../images/block-head-small-cap-content-grey-bg.gif) repeat-x;
+}
+
+.block-grey .foot .cap-left
+{
+    background: url(../images/block-foot-cap-left-grey-bg.gif) no-repeat;
+}
+
+.block-grey .foot .cap-right
+{
+    background: url(../images/block-foot-cap-right-grey-bg.gif) no-repeat;
+}
+
+.block-grey .foot .content
+{
+    background: url(../images/block-foot-cap-content-grey-bg.gif) repeat-x;
+}
+
+.block-colour .foot .cap-left
+{
+    background: url(../images/block-foot-cap-left-colour-bg.gif) no-repeat;
+}
+
+.block-colour .foot .cap-right
+{
+    background: url(../images/block-foot-cap-right-colour-bg.gif) no-repeat;
+}
+
+.block-colour .foot .content
+{
+    background: url(../images/block-foot-cap-content-colour-bg.gif) repeat-x;
+}
+
+.block .foot .content h2, .block .foot .content h2 a
+{
+    color: #FFF !important;
+}
+
+.block .small-head .content h2
+{
+    color: #FFF !important;
+}
+
+.footer-block .left-cap
+{
+    background: url(../images/page-footer-cap-left-colour-bg.gif) no-repeat;
+}
+
+.footer-block .right-cap
+{
+    background: url(../images/page-footer-cap-right-colour-bg.gif) no-repeat;
+}
+
+.footer-block .content
+{
+    color: #FFF;
+    background: url(../images/page-footer-cap-content-colour-bg.gif) repeat-x;
+}
+
+.footer-block .content a
+{
+    color: #FFF;
+}
+
+a.defaultLink
+{
+    color: #0000FF;
+}
+
+a.defaultLink:visited
+{
+    color: #A020F0;
+}
+
+/*--Start Simply-Buttons v2--*/
+/*--------------------------------------------------------------------------------------------------
+Simply Buttons, version 1.0  (c) 2007-2009 Kevin Miller
+
+  This script is freely distributable under the terms of an MIT-style license.
+  BUTTON DEFINITIONS
+  Edit below at your own risk, everything done here is for a reason for cross browser compatibility so that the buttons will appear identical in the tested browsers.
+  Tested on: IE6 IE7 FF(PC/MAC) Safari SafariMobile Opera(PC/MAC)
+--------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------------
+   CUSTOMIZATIONS
+
+   Edit below to change the look and feel of the buttons and even add more classes for
+   different looks and feels.
+--------------------------------------------------------------------------------------------------*/
+/* CERS Buttons */
+
+button, a.button, a.button:link, a.button:visited, span.button
+{
+    color: #FFF;
+    background-color: transparent;
+}
+
+button span.color, a.button span.color
+{
+    background-image: url(../images/bg-button-right-colour-sprite.png);
+}
+
+button span.grey, a.button span.grey
+{
+    background-image: url(../images/bg-button-right-grey-sprite.png);
+}
+
+button span.red, a.button span.red
+{
+    background-image: url(../images/bg-button-right-red-sprite.png);
+}
+
+button span.inactive, a.button span.inactive, span.button span.inactive
+{
+    color: #696969;
+    background-image: url(../images/bg-button-right-grey-sprite.png);
+}
+
+button span.color span, a.button span.color span
+{
+    background-image: url(../images/bg-button-left-colour-sprite.png);
+}
+
+button span.grey span, a.button span.grey span
+{
+    background-image: url(../images/bg-button-left-grey-sprite.png);
+}
+
+button span.red span, a.button span.red span
+{
+    background-image: url(../images/bg-button-left-red-sprite.png);
+}
+
+button span.inactive span, a.button span.inactive span, span.button span.inactive span
+{
+    background-image: url(../images/bg-button-left-grey-sprite.png);
+}
+
+button:hover, a.button:hover
+{
+    color: #FFF;
+}
+button.smallButton, a.smallButton, a.smallButton:link, a.smallButton:visited
+{
+    color: #000;
+    background-color: transparent;
+}
+
+button.smallButtonActive, a.smallButtonActive, a.smallButtonActive:link, a.smallButtonActive:visited
+{
+    color: #000;
+    background-color: transparent;
+}
+
+button.smallButtonActive, a.smallButtonActive, a.smallButtonActive:link, a.smallButtonActive:visited
+{
+    color: #FFF;
+}
+
+button.smallButton span, a.smallButton span
+{
+    background-image: url(../images/bg-small-button-right-grey-sprite.png);
+}
+
+button.smallButtonActive span, a.smallButtonActive span
+{
+    background-image: url(../images/bg-small-button-right-colour-sprite.png);
+}
+
+button.smallButtonRed span, a.smallButtonRed span
+{
+    background-image: url(../images/bg-small-button-right-red-sprite.png);
+}
+
+button.smallButton span.inactive, a.smallButton span.inactive
+{
+    color: #696969;
+    background-image: url(../images/bg-small-button-right-grey-sprite.png);
+}
+
+button.smallButton span span, a.smallButton span span
+{
+    background-image: url(../images/bg-small-button-left-grey-sprite.png);
+}
+
+button.smallButton span.inactive span, a.smallButton span.inactive span
+{
+    background-image: url(../images/bg-small-button-left-grey-sprite.png);
+}
+
+button.smallButtonRed span span, a.smallButtonRed span span
+{
+    background-image: url(../images/bg-small-button-left-red-sprite.png);
+}
+
+button.smallButtonActive span span, a.smallButtonActive span span
+{
+    background-image: url(../images/bg-small-button-left-colour-sprite.png);
+}
+
+button.smallButton:hover, a.smallButton:hover
+{
+    color: #000;
+}
+
+button.smallButtonActive:hover, a.smallButtonActive:hover
+{
+    color: #FFF;
+}
+
+.UPF_WarningMessage a
+{
+    color: #000000;
+}
+
+.UPF_WarningMessage a:hover
+{
+    color: #FF7A14;
+}
+
+.UPF_ErrorMessage a:hover
+{
+    color: #000000;
+}
+
+.UPF_ActionMessage a
+{
+    color: #000000;
+}
+
+.UPF_ActionMessage a:hover
+{
+    color: #A018E7;
+}
+
+.UPF_InfoMessage a
+{
+    color: #000000;
+}
+
+.UPF_InfoMessage a:hover
+{
+    color: #0a40eb;
+}
+
+.leftNavMenu a
+{
+    color: #696969;
+}
+
+.leftNavMenu a:hover
+{
+    color: #0D6AB0;
+}
+
+.leftNavMenu a.selected
+{
+    color: #0D6AB0;
+}
+
+/* End Custom.css colors/images */

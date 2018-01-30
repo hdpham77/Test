@@ -1,0 +1,14 @@
+﻿/*
+    This is for styles that are different from either Custom.css or Global.css in this particular portal.
+    For instance, the Primary Navigation buttons in Regulator are 90px wide while in all other portals they are 110px wide.
+*/
+
+.primary-navigation .content ol.right li a 
+{
+    width: 90px;
+}
+
+.primary-navigation .content ol.right li span.disabled
+{
+	width: 90px;
+}
